@@ -1,5 +1,14 @@
 from .workspace import (
-    Workspace,
-    WorkspaceCategory,
-    WorkspaceUser
+    Workspace
+)
+from .workspace_client import (
+    WorkspaceClient
+)
+
+from .client_project import (
+    WorkspaceClientProject
+)
+
+from .workspace_project import (
+    WorkspaceProject
 )
