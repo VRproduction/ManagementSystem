@@ -12,3 +12,7 @@ from .client_project import (
 from .workspace_project import (
     WorkspaceProject
 )
+
+from .project_task import (
+    Task
+)

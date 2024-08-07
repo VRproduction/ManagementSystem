@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 
 from utils.models.base_model import BaseModel
 from utils.slugify.custom_slugify import custom_slugify
+from utils.text.truncate_content import truncate
 
 User = get_user_model()
 
@@ -15,7 +16,7 @@ class Workspace(BaseModel):
     ]
     
     title = models.CharField(
-        'Virtual ofis', 
+        'Virtual ofisin adı', 
         max_length = 200, 
         unique = True
     )
@@ -41,7 +42,7 @@ class Workspace(BaseModel):
         on_delete=models.CASCADE,
         related_name='super_admin_workspaces',
         verbose_name='Super admin',
-        null=True, blank=True,
+        null=True, blank=True
     )
     status = models.CharField(
         choices=WORKSPACE_STATUS_CHOICES,
@@ -59,6 +60,10 @@ class Workspace(BaseModel):
         help_text="Bu qismi boş buraxın. Avtomatik doldurulacaq.",
         null=True, blank=True        
     )
+    is_banned = models.BooleanField(
+        'Banned',
+        default=False)
+
 
     class Meta:
         verbose_name = 'Virtual ofis'
@@ -66,27 +71,12 @@ class Workspace(BaseModel):
 
     @property
     def truncated_description(self):
-        max_words = 3
-        words = self.description.split()
-        truncated_words = words[:max_words]
-        truncated_content = ' '.join(truncated_words)
-
-        if len(words) > max_words:
-            truncated_content += ' ...'  
-
-        return truncated_content
+        return truncate(self.description)
 
     def save(self, *args, **kwargs):
-        self.slug = custom_slugify(self.title)
+        if not self.slug:
+            self.slug = custom_slugify(self.title)
         super(Workspace, self).save(*args, **kwargs)
-
-    def clean(self):
-        super().clean()
-        try:
-            if self.super_admin and self.super_admin not in self.admins.all():
-                raise ValidationError("Super admin must be listed in the admins.")
-        except User.DoesNotExist: 
-            raise ValidationError('User instance does not exist')
 
     def __str__(self) -> str:
         return self.title
