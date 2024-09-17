@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
+from urllib.parse import urlparse
 
 from utils.upload.workspace_client_image_upload import upload_to
 from utils.models.base_model import BaseModel
@@ -36,11 +37,20 @@ class Profile(BaseModel):
         'Instagram hesabı',
         null=True, blank=True
     )
+    tiktok_link = models.URLField(
+        'Tiktok hesabı',
+        null=True, blank=True
+    )
+    youtube_link = models.URLField(
+        'Youtube hesabı',
+        null=True, blank=True
+    )
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, 
         related_name="user_profile",
         verbose_name='İstifadəçi profili'
     )
+
 
     class Meta:
         verbose_name = 'İstifadəçi profili'
@@ -58,3 +68,14 @@ class Profile(BaseModel):
 
     def __str__(self) -> str:
         return f'{self.user}  profile'
+    
+    @property
+    def instagram_username(self):
+        if self.instagram_link:
+            parsed_url = urlparse(self.instagram_link)
+            # Assuming the URL format is something like 'https://www.instagram.com/username/'
+            path_segments = parsed_url.path.strip('/').split('/')
+            if path_segments:
+                return path_segments[0]
+        return None
+  
