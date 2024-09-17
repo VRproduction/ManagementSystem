@@ -8,7 +8,7 @@
         </div>
         <div class="modal-body">
             <div class="inviteby_email">
-                <form method="patch" action="{% url 'workspace-detail' project.workspace.slug %}" id="projectMemberInviteForm-{{project.id}}">
+                <form method="patch" action="{{project.workspace.get_absolute_url}}" id="projectMemberInviteForm-{{project.id}}">
                     {% csrf_token %}
                     <div class="input-group mb-3">
                         <input type="email" name="email" class="form-control" value="" placeholder="Email address" id="projectMemberEmail" aria-describedby="exampleInputEmail1">
