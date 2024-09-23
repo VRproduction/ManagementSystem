@@ -1,0 +1,49 @@
+{% load static %}
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskfries</title>
+
+    {% tailwind_css %}
+
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
+        integrity="sha512-B46MVOJpI6RBsdcU307elYeStF2JKT87SsHZfRSkjVi4/iZ3912zXi45X5/CBr/GbCyLx6M1GQtTKYRd52Jxgw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+<body class="bg-[#FAFCFE]">
+
+    <div class="custom-container flex">
+        <!-- Sidebar -->
+        {% include "layouts/dashboard/components/sidebar/Sidebar.html" %}
+      
+        <!-- Main Content -->
+        <div class="ml-[380px] flex-1 flex flex-col pt-[41px] p-[27px]">
+          <!-- Top Header -->
+        {% include "layouts/dashboard/components/header/Header.html" %}
+
+        {% block main %}
+        {% endblock main %}
+
+        </div> 
+      </div>
+      
+    {% include "layouts/dashboard/components/footer/Footer.html" %}
+
+</body>
+
+</html>
