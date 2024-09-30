@@ -1,21 +1,28 @@
-{% extends "layouts/default.html" %}
+{% extends "layouts/default/index.html" %}
+{% load static %}
 
 {% block main %}
 
-{% include "pages/home/components/Hero.html" %}
+{% include "pages/home/components/sections/Hero.html" %}
 
-{% include "pages/home/components/Categories.html" %}
+{% include "pages/home/components/sections/HowWork.html" %}
 
-{% include "pages/home/components/VirtualOffices.html" %}
+{% include "pages/home/components/sections/Categories.html" %}
 
-{% include "pages/home/components/HowWork.html" %}
+{% include "pages/home/components/sections/Statistics.html" %}
 
-{% include "pages/home/components/Freelancers.html" %}
+{% include "pages/home/components/sections/VirtualOffices.html" %}
 
-{% include "pages/home/components/Statistics.html" %}
+{% include "pages/home/components/sections/Freelancers.html" %}
 
-{% include "pages/home/components/CustomerComments.html" %}
+{% include "pages/home/components/sections/CustomerComments.html" %}
 
-{% include "pages/home/components/Freelancers-2.html" %}
+
+<div id="component"></div>
 
 {% endblock main %}
+
+
+{% block js %}
+<script src="{% static "js/pages/index.js" %}"></script>
+{% endblock js %}

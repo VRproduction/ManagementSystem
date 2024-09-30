@@ -4,7 +4,8 @@ from .models import (
     Partner, 
     HeroSection,
     HowToWork,
-    Statistics
+    Statistics,
+    CustomerComment
 )
 
 
@@ -42,3 +43,8 @@ class StatisticsAdmin(admin.ModelAdmin):
     def has_add_permission(self, request):
         """Prevent adding more than one instance."""
         return not self.model.objects.count() == 4
+        
+@admin.register(CustomerComment)
+class CustomerCommentAdmin(admin.ModelAdmin):
+    list_display = ('customer_name', 'location', 'title', 'rating')
+    search_fields = ('customer_name', 'location', 'title')

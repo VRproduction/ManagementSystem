@@ -4,7 +4,8 @@ from apps.pages.home.models import (
     Partner, 
     HeroSection,
     HowToWork,
-    Statistics
+    Statistics,
+    CustomerComment
 )
 from apps.freelancer.models import FreelancerCategory
 
@@ -18,4 +19,5 @@ class HomePageView(TemplateView):
         context['freelancer_categories'] = FreelancerCategory.objects.all()[:7]
         context['how_to_work'] = HowToWork.objects.all()[:4]
         context['statistics'] = Statistics.objects.all()[:4]
+        context['customer_comments'] = CustomerComment.objects.all()
         return context
