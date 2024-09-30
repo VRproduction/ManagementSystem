@@ -11,5 +11,5 @@ class CustomerComment(BaseModel):
     rating = models.IntegerField(choices=[(i, i) for i in range(1, 6)])  # 1-5 stars rating
 
     def __str__(self):
-        return f'{self.name} - {self.title}'
+        return f'{self.customer_name} - {self.title}'
 
