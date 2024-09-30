@@ -6,6 +6,7 @@
  */
 
 module.exports = {
+    darkMode: 'class', // 'media' veya 'class' olarak ayarlanabilir
     content: [
         // Templates within theme app (e.g. base.html)
         '../templates/**/*.html',
@@ -21,17 +22,43 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Work Sans', 'sans-serif'], // Burada Work Sans fontunu tanımlıyoruz
-                DMSans: ['DM Sans', 'sans-serif'],
+              sans: ['Inter', 'sans-serif'], // Varsayılan sans-serif fontunu Inter ile değiştir
+              DMSans: ['DM Sans', 'sans-serif'],
               },
             colors: {
-              primary: '#31FFAA', 
-              'primary-hover': '#28D79E', 
-              secondary: '#FEE86E', 
-              'secondary-hover': '#28D79E', 
+              primary: {
+                DEFAULT: '#F5AB20',       // Default primary
+                dark: '#E39500',          // Dark mode primary
+                hover: '#D58A00',         // Hover state in light mode
+                darkHover: '#C37400',     // Dark mode hover
+              },
+              secondary: {
+                DEFAULT: '#FFFFFF',         // Light mode background
+                dark: '#B0B0B0',            // Daha koyu bir karanlık mod arka plan rengi
+                hover: '#F0F0F0',           // Hover state in light mode
+                darkHover: '#A0A0A0',       // Karanlık mod hover rengi
+              },
+              text: {
+                white: '#FFFFFF',            // Beyaz metin
+                black: '#131313',            // Siyah metin
+                hoverWhite: '#EAEAEA',       // Beyaz metin için hover durumu
+                hoverBlack: '#CCCCCC',        // Siyah metin için hover durumu
+                dark: {
+                  white: '#EAEAEA',           // Koyu modda beyaz metin
+                  black: '#FFFFFF',           // Koyu modda siyah metin
+                  hoverWhite: '#FFFFFF',      // Koyu modda beyaz metin için hover durumu
+                  hoverBlack: '#CCCCCC',      // Koyu modda siyah metin için hover durumu
+                },
+              },
+              background: {
+                DEFAULT: '#FBF9F6',          // Light mode background
+                dark: '#1A1A1A',             // Dark mode background (daha koyu)
+                hover: '#F5F3F0',            // Hover state in light mode
+                darkHover: '#333333',        // Dark mode hover (daha koyu ton)
+              },
             },
             maxWidth: {
-                'custom': '1595px', // Özel genişlik
+                'custom': '1224px', // Özel genişlik
             },
             animation: {
                 marquee: 'marquee 15s linear infinite',

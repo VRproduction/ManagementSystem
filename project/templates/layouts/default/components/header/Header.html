@@ -1,0 +1,75 @@
+{% load nav_links %}
+{% load static %}
+<style>
+    .hover-underline::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2.8px;
+        bottom: -3px;
+        left: 50%;
+        background-color: black;
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+  
+      .hover-underline:hover::before {
+        width: 100%;
+        left: 0;
+      }
+  
+      /* Active link default dot */
+      .active-dot::after {
+        content: '';
+        position: absolute;
+        bottom: -7px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 2.6px;
+        background-color: black;
+        border-radius: 50%;
+      }
+  </style>
+<header class="hidden lg:block bg-secondary border-b border-b-[#D0D0D0] dark:bg-secondary-dark">
+      <div class="custom-container h-[88px] flex justify-between items-center">
+        <div>
+            <img class="w-[234px]" src="{{settings.logo.url}}" alt="">
+        </div>
+        <div>
+            <ul class="flex gap-[36px] font-normal text-[16px] text-text-black dark:text-text-dark-black">
+              <!-- Active link with dot -->
+              <li class="relative hover-underline">
+                <a href="{% url "home" %}" class="relative {% active_link 'home' %}">Ana səhifə</a>
+              </li>
+              <!-- Other links with hover underline -->
+              <li class="relative hover-underline">
+                <a href="{% url "about" %}" class="relative {% active_link 'about' %}">Haqqımızda</a>
+              </li>
+              <li class="relative hover-underline">
+                <a href="#">Virtual ofislar</a>
+              </li>
+              <li class="relative hover-underline">
+                <a href="{% url "freelancer" %}" class="relative {% active_link 'freelancer' %}">Frilanserlər</a>
+              </li>
+              <li class="relative hover-underline">
+                <a href="{% url "blog" %}" class="relative {% active_link 'blog' %}">Bloq</a>
+              </li>
+              <li class="relative hover-underline">
+                <a href="{% url "contact" %}" class="relative {% active_link 'contact' %}">Əlaqə</a>
+              </li>
+            </ul>
+        </div>
+        <div class="flex gap-[16px]">
+          <a class="border rounded-[16px] px-[14px] py-[10px] border-primary dark:border-primary-dark bg-secondary dark:bg-secondary-dark text-text-black dark:text-text-dark-black" href="{% url 'login' %}">Daxil ol</a>
+          <a class="border rounded-[16px] px-[14px] py-[10px] border-primary dark:border-primary-dark bg-primary text-text-black dark:text-text-dark-black dark:bg-primary-dark hover:bg-primary-hover hover:border-primary-hover transition-all" href="{% url 'register' %}">Qeydiyyat</a>
+            <button id="theme-toggle">
+              <div id="sun-icon">
+                {% include "components/ui/icons/Sun.html" %}
+              </div>
+              <div id="moon-icon">
+                {% include "components/ui/icons/Moon.html" %}
+              </div>
+            </button>
+        </div>
+  </div>
+</header>

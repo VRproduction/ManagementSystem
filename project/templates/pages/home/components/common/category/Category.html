@@ -1,0 +1,25 @@
+<div class="bg-secondary dark:bg-secondary-dark border border-[#DDDDDD] h-[392px] rounded-[27px] p-[24px]">
+    <div class="flex w-full justify-between gap-[48px]">
+        <div class="flex flex-col gap-[4px] w-[75%]">
+            <h3 class="text-[20px] font-[600] leading-[28px] text-text-black dark:text-text-dark-black">{{category.name}}</h3>
+            <p class="text-[14px] leading-[24px] text-text-black dark:text-text-dark-black">{{category.small_description}}</p>
+        </div>
+        <a class="cursor-pointer w-[40px] h-[40px] border border-text-black rounded-full bg-background hover:bg-background-hover grid place-items-center">
+            {% include "components/ui/icons/AxesTopRight.html" %}
+        </a>
+    </div>
+    <p class="mt-[24px] text-[20px] font-[00] text-text-black dark:text-text-dark-black">1853 üzv</p> 
+    <div class="mt-[12px] flex w-full justify-center flex-grow">
+        <img src="{{category.file.url}}" alt="{{category.name}}">
+    </div>
+</div>
+{% comment %} <div class="relative h-[120px] w-full mt-[6px] px-[8px]">
+    <div class="h-full w-full grid place-items-center rounded-[20px] bg-primary">
+        <h3 class="text-[20px] font-[500]">{{category.name}}</h3>
+    </div>
+    <div class="absolute top-[72px] left-[22px] w-[96px] h-[96px] border-[4.5px] border-[#FEE86E] rounded-full bg-white grid place-items-center">
+        <img src="{{category.file.url}}" alt="{{category.name}}">
+    </div>
+</div>
+<p class="mt-[92px] px-[30px] text-center text-[19px] font-[500] leading-[22px] text-white">{{category.small_description}}</p>
+<p class="mt-[17px] text-[16px] text-center font-[700] text-white">1853 üzv</p> {% endcomment %}

@@ -2,7 +2,7 @@
 {% load static tailwind_tags %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="{% if request.session.theme == 'dark' %}dark{% endif %}">
 
 <head>
     <meta charset="UTF-8">
@@ -27,16 +27,19 @@
 
 </head>
 
-<body>
-    {% include "components/layout/header/Header.html" %}
-    {% include "components/layout/header/MobileHeader.html" %}
+<body class="bg-background dark:bg-background-dark" >
+    {% include "layouts/default/components/header/Header.html" %}
+    {% include "layouts/default/components/header/MobileHeader.html" %}
 
     {% block main %}
 
     {% endblock main %}
 
-    {% include "components/layout/footer/Footer.html" %}
+    {% include "layouts/default/components/footer/Footer.html" %}
 
+    <script type="module" src="{% static 'dist/default.bundle.js' %}"></script>
+    
+    {% block js %}{% endblock js %}
 </body>
 
 </html>
