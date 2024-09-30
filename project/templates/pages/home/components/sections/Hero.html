@@ -1,0 +1,53 @@
+{% load static %}
+
+<section class="custom-container h-[calc(100vh-87px)]  pt-[10%] grid grid-cols-2 gap-[128px]">
+    <div class="flex items-center">
+        <div class="">
+            <h2 class="text-[40px] w-[90%] font-[500] leading-[48px] text-text-black dark:text-text-dark-black">{{hero_section.title}}</h2>
+            <p class="text-[22px] font-[400] mt-[20px] leading-[36px] text-text-black dark:text-text-dark-black">{{hero_section.description}}</p>
+            <div class="mt-[47px]">
+                <div class="relative">
+                    <button class="bg-primary font-[500] w-[125px] h-[52px] rounded-[20px]">Frilanser ol</button>
+                    <a class="absolute top-0 left-[109px] w-[52px] h-[52px] border border-text-black rounded-full bg-[#FBF9F1] hover:bg-[#d1cdbe] transition-all grid place-items-center" href="">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.7109 19.705L22.7476 12.1042L15.1468 10.0675" stroke="#344054" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.25195 19.8958L22.6126 12.182" stroke="#344054" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex items-center">
+        <img class="" src="{{hero_section.image.url}}" alt="Hero">
+    </div>
+</section>
+
+ <section>
+    <div class="relative bg-primary flex items-center h-[64px] overflow-hidden">
+        <div class="flex h-full items-center md:gap-[160px] animate-marquee  whitespace-nowrap">
+            {% for partner in partners %}
+                <img class="h-[32px]" src="{{partner.logo.url}}" alt="">
+            {% endfor %}
+            {% for partner in partners %}
+                <img class="h-[32px]" src="{{partner.logo.url}}" alt="">
+            {% endfor %}
+            {% for partner in partners %}
+                <img class="h-[32px]" src="{{partner.logo.url}}" alt="">
+            {% endfor %}
+            {% for partner in partners %}
+                <img class="h-[32px]" src="{{partner.logo.url}}" alt="">
+            {% endfor %}
+            {% for partner in partners %}
+                <img class="h-[32px]" src="{{partner.logo.url}}" alt="">
+            {% endfor %}
+            {% for partner in partners %}
+                <img class="h-[32px]" src="{{partner.logo.url}}" alt="">
+            {% endfor %}
+            {% for partner in partners %}
+                <img class="h-[32px]" src="{{partner.logo.url}}" alt="">
+            {% endfor %}
+          </div>    
+    </div>
+</section> 
+
