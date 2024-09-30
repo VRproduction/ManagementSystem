@@ -1,34 +1,20 @@
-<div class="flex flex-col px-[11.5px] border-primary border-[2px] border-t-[6px] rounded-[22px]">
-    <div class="mt-[24px] flex flex-col items-center">
-        <div class="rounded-full w-[128px] h-[128px] p-[15px] bg-[#fdfdfc] shadow-sm">
-            <img class="w-full h-full rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTINBp4YepsF8pBMNAVCpFvAP9-6S8eOgu-Dw&s" alt="">
-        </div>
-        <h3 class="text-[28px] font-[500] mt-[22px]">Əli Əliyev</h3>
-        <p class="mt-[10px] text-opacity-45 text-black">Dizayner</p>
-        <div class="flex w-full justify-between mt-[50px]">
-            <div class="bg-secondary py-[10px] px-[16px] text-[22px] rounded-[22px] text-white">Figma</div>
-            <div class="bg-secondary py-[10px] px-[16px] text-[22px] rounded-[22px] text-white">HTML</div>
-            <div class="bg-secondary py-[10px] px-[16px] text-[22px] rounded-[22px] text-white">Skectch</div>
-        </div>
+{% load star_rating %}
+
+<div class="rounded-[12px] bg-white p-[16px] border border-borderDefault flex gap-[32px]">
+    <div class="">
+        <img class="rounded-full w-[150px] h-[150px] object-cover" src="https://s3-alpha-sig.figma.com/img/554e/9d72/ec3b3e4bffd6dc083912591974154c31?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OgKCeMhgp9RbvRjYV2GTEQenZHz3wjkc~yq9vG4bCvcIYllUi9KIi6EAt3wwHuKXME~o-JiIrqVJeVu6MPELDsJ~8CQRvGjtW7O07JNqxq4W-yYLdTH7SpUbjKpaPTXa97Ra1YfL1kpAx5xbV9fzmvodXgQ2bm0l8JtQzgOujE3BVFj~tfSgPtgZEPcbI1ljEzZA7OcYnK7Ipx6M5SBoDqrTnhTUOwzARKR~q-B9rlzAhQZBr0kMKbnqPzINuBX4bSkfMs6c96e4idz26kK2yTe~092nCMuyxVbGjCSkCccvOeRT5Vz-f-DXWs~TkqSKVhC~iPD-Y4XIKxouDi7i5Q__" alt="">
     </div>
-    <div class="mt-[16px] border-t border-b border-[#F5AB2080]/50 flex w-full justify-center">
-        <div class="w-[70%] py-[50px]">
-            <div class="flex justify-between text-[22px]">
-                <span class="text-[#363636]">Uğur faizi</span>
-                <span class="text-[#363636] text-opacity-[67%]">98%</span>
-            </div>
-            <div class="flex justify-between text-[22px]">
-                <span class="text-[#363636]">Ödəniş</span>
-                <span class="text-[#363636] text-opacity-[67%]">50 azn</span>
-            </div>
+    <div class="p-[12px] flex flex-col">
+        <h2 class="text-[20px] font-[500] text-text-bl">Nicat Məmmədov</h2>
+        <p class="mt-[4px] font-[500] text-text-black">UI-UX Design Expart</p>
+        <div class="mt-[8px] flex gap-[9px]">
+            {% rating rating=4 total=5 font_size=16 %}
         </div>
-    </div>
-    <div>
-        <a href="" class="flex gap-[12px] items-center justify-center py-[20.5px]">
-            <span class="text-[20px]">Profili gör</span>
-            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.7499 1.28174V11.0317C13.7499 11.2307 13.6709 11.4214 13.5303 11.5621C13.3896 11.7027 13.1988 11.7817 12.9999 11.7817C12.801 11.7817 12.6103 11.7027 12.4696 11.5621C12.3289 11.4214 12.2499 11.2307 12.2499 11.0317V3.09205L1.53055 13.8124C1.38982 13.9531 1.19895 14.0322 0.999929 14.0322C0.800906 14.0322 0.610034 13.9531 0.469304 13.8124C0.328573 13.6716 0.249512 13.4808 0.249512 13.2817C0.249512 13.0827 0.328573 12.8918 0.469304 12.7511L11.1896 2.03174H3.24993C3.05102 2.03174 2.86025 1.95272 2.7196 1.81207C2.57895 1.67142 2.49993 1.48065 2.49993 1.28174C2.49993 1.08283 2.57895 0.892061 2.7196 0.751408C2.86025 0.610756 3.05102 0.531738 3.24993 0.531738H12.9999C13.1988 0.531738 13.3896 0.610756 13.5303 0.751408C13.6709 0.892061 13.7499 1.08283 13.7499 1.28174Z" fill="black"/>
-            </svg>
-        </a>
+        <div class="flex flex-grow items-end gap-[12px]">
+            <div class="rounded-[22px] text-white p-[8px] text-[12px] font-[500] bg-[#3F3F3F]">Figma</div>
+            <div class="rounded-[22px] text-white p-[8px] text-[12px] font-[500] bg-[#3F3F3F]">Balsamiq</div>
+            <div class="rounded-[22px] text-white p-[8px] text-[12px] font-[500] bg-[#3F3F3F]">Hotjar</div>
+            <div class="rounded-[22px] text-white p-[8px] text-[12px] font-[500] bg-[#3F3F3F]">Notion</div>
+        </div>
     </div>
 </div>

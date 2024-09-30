@@ -8,7 +8,7 @@ class AboutUs(SingletonModel, BaseModel):
     description = models.TextField(
         'Haqqımızda məlumat'
     )
-
+    image = models.ImageField(upload_to = 'about')
     class Meta:
         verbose_name = 'Haqqımızda'
         verbose_name_plural = 'Haqqımızda'
