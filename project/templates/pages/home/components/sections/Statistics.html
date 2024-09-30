@@ -1,0 +1,21 @@
+<section class="mt-[160px] custom-container">
+    <div class="">
+        <div class="flex items-center justify-between">
+            <h3 class="text-[36px] leading-[44px] text-text-black dark:text-text-dark-black font-[600]">Kateqoriya</h3>
+        </div>
+    </div>
+    <div class="mt-[48px] py-[24px] px-[36px] bg-[#242424] rounded-[20px]">
+        <div class=" grid grid-cols-4">
+            {% for object in statistics %}
+            <div class="flex flex-col items-center">
+                <div class="w-[80px] h-[80px] grid place-items-center">
+                    <img src="{{object.file.url}}" alt="{{object.title}}">
+                </div>
+                <span class="mt-[20px] text-text-white dark:text-text-dark-white text-[24px] leading-[32px] font-[700]">{{object.number}}</span>
+                <p class="mt-[4px] leading-[24px] text-primary dark:text-primary-dark">{{object.title}}</p>    
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+</section>

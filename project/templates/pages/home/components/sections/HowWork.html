@@ -1,0 +1,15 @@
+<section class="mt-[120px] custom-container">
+    <h3 class="text-[36px] font-[600] leading-[44px] text-text-black dark:text-text-dark-black">Necə işləyir?</h3>
+    <p class="mt-[16px] leading-[28px]  underline text-[20px] font-[500] text-text-black/70 dark:text-text-dark-black/70">Sizin rahatlığınız üçün daima üzərimizdə çalışırıq.</p>
+    <div class="mt-[48px] grid grid-cols-4 gap-[84px]">
+        {% for object in how_to_work %}
+        <div class="flex flex-col items-center">
+            <div class="w-[72px] h-[72px] grid place-items-center rounded-full border border-text-black">
+                <img src="{{object.file.url}}" alt="{{object.title}}">
+            </div>
+            <h4 class="leading-[28px] font-[600] mt-[16px] text-center text-text-black dark:text-text-dark-black">{{object.title}}</h4>
+            <p class="leading-[24px] text-center mt-[16px] text-text-black/50 dark:text-text-dark-black/50">{{object.description}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
