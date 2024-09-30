@@ -56,6 +56,7 @@ module.exports = {
                 hover: '#F5F3F0',            // Hover state in light mode
                 darkHover: '#333333',        // Dark mode hover (daha koyu ton)
               },
+              borderDefault: "#DDDDDD"
             },
             maxWidth: {
                 'custom': '1224px', // Özel genişlik
