@@ -1,71 +1,81 @@
 <style>
   .commentSwipper .swiper-pagination-bullet {
-    width: 20px; /* Noktaların genişliği */
-    height: 20px; /* Noktaların yüksekliği */
-    background-color: #FFB90680; /* Varsayılan renk */
+    width: 10px; /* Noktaların genişliği */
+    height: 10px; /* Noktaların yüksekliği */
+    background-color: #AAAAB3; /* Varsayılan renk */
     border-radius: 50%; /* Daire şeklinde olmasını sağlar */
     opacity: 1; /* Noktaların daha net görünmesi için */
-    margin: 0 24px; /* Noktalar arasındaki boşluk */
-    border: 1px solid lightgray; /* İnce gri kenar ekleyin */
-    border-color: white;
+    margin: 0 8px; /* Noktalar arasındaki boşluk */
   }
 
   /* Aktif pagination noktası (merkezdeki nokta) */
   .commentSwipper .swiper-pagination-bullet-active {
-    background-color: black; /* Aktif olan noktanın rengi siyah */
-    width: 20px; /* Boyutu aynı kalıyor */
-    height: 20px;
-    border-color:#D0D0D0;
+    background-color:#FDB824 !important; /* Aktif olan noktanın rengi siyah */
+    width: 12px; /* Boyutu aynı kalıyor */
+    height: 12px;
   }
 
-  .commentSwipper .customer-comment-quates path{
-    fill: black;
-  }
-  .commentSwipper .swiper-slide {
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.3s ease;
-    margin: 68px 0 0 0;
-  }
-
-  /* Ortadaki slide için stil */
-  .commentSwipper .swiper-slide.active-slide {
-    background-color: #242424;
-    color: white !important;
-    margin: 0;
-  }
-  .commentSwipper .swiper-slide.active-slide .customer-comment-quates path{
-    fill: white;
-  }
-  .commentSwipper .swiper-slide.active-slide .customer{
-    color: black;
-  }
-
-  .commentSwipper .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  @media (min-width: 768px) {
+    .commentSwipper .swiper-pagination-bullet {
+      width: 12px; /* Noktaların genişliği */
+      height: 12px; /* Noktaların yüksekliği */
+      margin: 0 8px; /* Noktalar arasındaki boşluk */
+    }
   
+    /* Aktif pagination noktası (merkezdeki nokta) */
+    .commentSwipper .swiper-pagination-bullet-active {
+      width: 16px; /* Boyutu aynı kalıyor */
+      height: 16px;
+    }
+
+    .commentSwipper .customer-comment-quates path{
+      fill: black;
+    }
+    .commentSwipper .swiper-slide {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s ease;
+      margin: 68px 0 0 0;
+    }
+  
+    /* Ortadaki slide için stil */
+    .commentSwipper .swiper-slide.active-slide {
+      background-color: #383838 !important;
+      color: white !important;
+      margin: 0;
+    }
+    .commentSwipper .swiper-slide.active-slide *{
+      color: white !important;
+    }
+    .commentSwipper .swiper-slide.active-slide .categories-user-info > div{
+      background-color: #fff !important;
+      color: black !important;
+      margin: 0;
+    }
+    .commentSwipper .swiper-slide.active-slide .categories-user-info *{
+      color: black !important;
+    }
+  }
+ 
+ 
 </style>
 
-<section class="mt-[160px] custom-container">
-    <div class="flex mb-[71px] items-center justify-between">
-      <h3 class="text-[36px] leading-[44px] text-text-black dark:text-text-dark-black font-[600]">Müştəri rəyləri</h3>
+<section class="mt-[88px] md:mt-[200px] custom-container">
+    <div class="flex mb-[36px] md:mb-[92px] items-center justify-between">
+      <h3 class="text-[24px] md:text-[36px] leading-[44px] text-text-black dark:text-text-dark-black font-[600]">Müştəri rəyləri</h3>
     </div>
     <!-- Swiper -->
     <div class="swiper commentSwipper">
-        <div class="swiper-wrapper mb-[48px]">
+        <div class="swiper-wrapper mb-[60px] md:mb-[78px]">
             {% for comment in customer_comments %}
-            <div class="swiper-slide  rounded-[22px]">
+            <div class="swiper-slide  rounded-[20px] bg-[#383838] md:bg-white rounded-b-[23px] !block">
                 {% include "pages/home/components/common/comment/Comment.html" with comment=comment %}
             </div>
             {% endfor %}
         </div>
-        <div class=" swiper-pagination"></div>
+        <div class=" swiper-pagination flex items-center justify-center"></div>
       </div>
     </div>
 </section>
@@ -73,12 +83,23 @@
 <!-- Initialize Swiper -->
 <script>
   var commentSwipper = new Swiper(".commentSwipper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 24,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
+      breakpoints: {
+        492: {
+            slidesPerView: 1.5,
+          },
+        640: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+      },
     on: {
       slideChange: function () {
         // Bütün slaytlardan 'active-slide' sınıfını kaldır
@@ -88,7 +109,7 @@
 
         // Ortadaki slayta 'active-slide' sınıfını ekle
         let activeIndex = commentSwipper.activeIndex + 1; // ortadaki slayt
-        let slides = document.querySelectorAll(".swiper-slide");
+        let slides = document.querySelectorAll(".commentSwipper .swiper-slide");
         if (slides[activeIndex]) {
           slides[activeIndex].classList.add("active-slide");
         }
@@ -99,7 +120,7 @@
   // İlk başta ortadaki slayta 'active-slide' sınıfı ekle
   document.addEventListener("DOMContentLoaded", function () {
     let activeIndex = commentSwipper.activeIndex + 1; // ortadaki slayt
-    let slides = document.querySelectorAll(".swiper-slide");
+    let slides = document.querySelectorAll(".commentSwipper .swiper-slide");
     slides[activeIndex].classList.add("active-slide");
   });
 </script>

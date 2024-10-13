@@ -41,6 +41,8 @@ module.exports = {
               text: {
                 white: '#FFFFFF',            // Beyaz metin
                 black: '#131313',            // Siyah metin
+                gray: '#898989',
+                disabled: '#DDDDDD',
                 hoverWhite: '#EAEAEA',       // Beyaz metin için hover durumu
                 hoverBlack: '#CCCCCC',        // Siyah metin için hover durumu
                 dark: {
