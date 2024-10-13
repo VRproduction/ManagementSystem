@@ -30,11 +30,18 @@
     </div>
     <div class="swiper virtualOfficeSwipper mt-[24px] md:!hidden">
         <div class="swiper-wrapper mb-[60px]">
-        {% for category in freelancer_categories %}
             <div class="swiper-slide">
                 {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
             </div>  
-        {% endfor %}
+            <div class="swiper-slide">
+                {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+            </div> 
+            <div class="swiper-slide">
+                {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+            </div> 
+            <div class="swiper-slide">
+                {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+            </div> 
         </div>
         <div class="swiper-pagination flex items-center justify-center"></div>
     </div>
