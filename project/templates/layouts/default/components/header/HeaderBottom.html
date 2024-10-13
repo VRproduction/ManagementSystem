@@ -1,0 +1,33 @@
+<header class="hidden lg:block relative bg-secondary h-[78px] border-b border-borderDefault dark:bg-secondary-dark z-[500]">
+    <div class="custom-container flex justify-between items-center">
+      <div>
+      </div>
+
+        <div class="w-[491px] h-[56px] border border-borderDefault flex justify-between items-center px-[24px] rounded-[57px]">
+            <div class="flex items-center flex-1">
+                {% include "components/ui/icons/Search.html" %}
+                <input class="mx-[8px] flex-1 border-black p-0 bg-transparent border-0 focus:ring-0 focus:outline-none" type="text" placeholder="Sizə maraqlı olanı axtarın">
+            </div>
+            <div class="border-l flex items-center gap-[4px]">
+                <span class="ml-[12px]">İstedad</span>
+                {% include "components/ui/icons/AxesBottom.html" %}
+            </div>
+        </div>
+    
+      <div class="flex gap-[16px]">
+        <button class="flex items-center gap-[4px]">
+            {% include "components/ui/icons/Language.html" %}
+            <span class="font-[500]">Az</span>
+            {% include "components/ui/icons/AxesBottom.html" %}
+        </button>
+        <button class="theme-toggle">
+            <div class="sun-icon">
+                {% include "components/ui/icons/Sun.html" %}
+            </div>
+            <div class="moon-icon">
+                {% include "components/ui/icons/Moon.html" %}
+            </div>
+         </button>
+      </div>
+</div>
+</header>

@@ -1,4 +1,6 @@
 import themeToggle from '../components/themeToggle';  
 
 
-themeToggle();
+document.addEventListener('DOMContentLoaded', () => {
+    themeToggle();
+});
