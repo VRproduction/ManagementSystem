@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Taskfries</title>
 
     {% tailwind_css %}
@@ -32,6 +32,7 @@
 
 <body class="bg-background dark:bg-background-dark" >
     {% include "layouts/default/components/header/Header.html" %}
+    {% include "layouts/default/components/header/HeaderBottom.html" %}
     {% include "layouts/default/components/header/MobileHeader.html" %}
 
     {% block main %}

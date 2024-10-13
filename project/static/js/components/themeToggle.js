@@ -1,38 +1,29 @@
 import { setCookie, getCookie } from '../modules/cookieUtils.js';
 
 const themeToggle = () => {
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const currentTheme = getCookie('theme');
+    const themeToggleButtons = document.querySelectorAll('.theme-toggle'); // Tüm butonları seç
+    const currentTheme = getCookie('theme') || 'light'; // Varsayılan olarak 'light' teması
+    const html = document.documentElement;
 
-    // Sayfa yüklendiğinde mevcut temayı kontrol et
-    if (currentTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-        document.getElementById('sun-icon').classList.add('hidden');
-        document.getElementById('moon-icon').classList.remove('hidden');
-    } else {
-        document.documentElement.classList.remove('dark');
-        document.getElementById('sun-icon').classList.remove('hidden');
-        document.getElementById('moon-icon').classList.add('hidden');
-    }
+    // Sayfa yüklenirken temayı başlat
+    const isDark = currentTheme === 'dark';
+    html.classList.toggle('dark', isDark);
 
-    themeToggleBtn.addEventListener('click', () => {
-        const html = document.documentElement;
+    themeToggleButtons.forEach((btn) => {
+        const sunIcon = btn.querySelector('.sun-icon');
+        const moonIcon = btn.querySelector('.moon-icon');
 
-        if (html.classList.contains('dark')) {
-            // Dark temayı kaldır
-            html.classList.remove('dark');
-            setCookie('theme', 'light', 7); // Çerezde light olarak ayarla
-            // İkon değişimi
-            document.getElementById('sun-icon').classList.remove('hidden');
-            document.getElementById('moon-icon').classList.add('hidden');
-        } else {
-            // Dark temayı ekle
-            html.classList.add('dark');
-            setCookie('theme', 'dark', 7); // Çerezde dark olarak ayarla
-            // İkon değişimi
-            document.getElementById('sun-icon').classList.add('hidden');
-            document.getElementById('moon-icon').classList.remove('hidden');
-        }
+        // İkonları başlat
+        sunIcon.classList.toggle('hidden', isDark);
+        moonIcon.classList.toggle('hidden', !isDark);
+
+        // Butona tıklama olayı ekle
+        btn.addEventListener('click', () => {
+            const isDark = html.classList.toggle('dark');
+            setCookie('theme', isDark ? 'dark' : 'light', 7); // Temaya göre çerez ayarla
+            sunIcon.classList.toggle('hidden', isDark);
+            moonIcon.classList.toggle('hidden', !isDark);
+        });
     });
 };
 
