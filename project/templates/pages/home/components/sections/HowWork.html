@@ -1,14 +1,14 @@
-<section data-aos="zoom-in" class="mt-[120px] custom-container">
-    <h3 class="text-[36px] font-[600] leading-[44px] text-text-black dark:text-text-dark-black">Necə işləyir?</h3>
-    <p class="mt-[16px] leading-[28px]  underline text-[20px] font-[500] text-text-black/70 dark:text-text-dark-black/70">Sizin rahatlığınız üçün daima üzərimizdə çalışırıq.</p>
-    <div class="mt-[48px] grid grid-cols-4 gap-[84px]">
+<section data-aos="fade-down" class="mt-[88px] md:mt-[200px] custom-container">
+    <h3 class="text-[24px] md:text-[36px] font-[600] leading-[44px] text-text-black dark:text-text-dark-black">Necə işləyir?</h3>
+    <p class="mt-[12px] md:mt-[16px] leading-[28px] text-[12px] md:text-[20px] font-[500] text-text-gray dark:text-text-dark-black/70">Sizin rahatlığınız üçün daima üzərimizdə çalışırıq.</p>
+    <div class="mt-[44px] md:mt-[64px] grid md:grid-cols-4 gap-[40px] md:gap-[84px]">
         {% for object in how_to_work %}
         <div class="flex flex-col items-center">
-            <div class="w-[72px] h-[72px] grid place-items-center rounded-full border border-text-black">
+            <div class="w-[80px] h-[80px] grid place-items-center">
                 <img src="{{object.file.url}}" alt="{{object.title}}">
             </div>
-            <h4 class="leading-[28px] font-[600] mt-[16px] text-center text-text-black dark:text-text-dark-black">{{object.title}}</h4>
-            <p class="leading-[24px] text-center mt-[16px] text-text-black/50 dark:text-text-dark-black/50">{{object.description}}</p>
+            <h4 class="leading-[28px] text-[20px] font-[600] mt-[16px] text-center text-text-black dark:text-text-dark-black">{{object.title}}</h4>
+            <p class="leading-[24px] text-center mt-[16px] text-text-gray dark:text-text-dark-black/50">{{object.description}}</p>
         </div>
         {% endfor %}
     </div>

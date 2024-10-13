@@ -1,23 +1,25 @@
 {% load star_rating %}
 
-<div>
-    <div class="px-[36px] py-[24px]">
+<div class="h-[420px] md:h-[381px] flex flex-col">
+    <div class="px-[25px] py-[32px]">
         <div class="customer-comment-quates">
             {% include "components/ui/icons/Quates.html" %}
         </div>
-        <h5 class="text-[24px] font-[500] mt-[20px]">{{comment.title}}</h5>
-        <p class="mt-[16px] text-[16px] leading-[24px] font-[400]">{{comment.comment}}</p>
+        <h5 class="text-[24px] font-[500] mt-[20px] text-white md:text-text-black">{{comment.title}}</h5>
+        <p class="mt-[16px] text-[16px] leading-[20px] md:leading-[24px] font-[400] text-white md:text-text-gray">{{comment.comment}}</p>
         <div class="mt-[16px] flex gap-[1px]">
             {% rating rating=4 total=5 font_size=20 %}
         </div>
     </div>
-    <div class="customer flex items-center gap-[12px] px-[38px] py-[14px] h-[100px] bg-[#F4F5F5] rounded-[20px] border-b-[2px] border-[#EEFDF1]">
-        <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
-            <img class="w-full h-full rounded-full object-center" src="{{comment.profile_image.url}}" alt="">
-        </div>
-        <div>
-            <h3 class="text-[20px] font-[500]">{{comment.customer_name}}</h3>
-            <p>{{comment.location}}</p>
-        </div>
+    <div class="categories-user-info rounded-[20px] flex items-end w-full flex-grow">
+        <div class="flex w-full items-center gap-[12px] py-[8px] px-[24px] md:py-[16px] h-[100px] bg-secondary text-text-black md:bg-primary md:text-white rounded-[20px]">
+            <div class="w-[64px] h-[64px] md:w-[72px] md:h-[72px] rounded-full overflow-hidden">
+                <img class="w-full h-full rounded-full object-cover object-center" src="{{comment.profile_image.url}}" alt="">
+            </div>
+            <div>
+                <h3 class="text-[16px] md:text-[20px] font-[500]">{{comment.customer_name}}</h3>
+                <p class="text-[12px]">{{comment.location}}</p>
+            </div>
+        </div> 
     </div>
 </div>

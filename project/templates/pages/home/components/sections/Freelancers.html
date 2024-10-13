@@ -1,9 +1,9 @@
-<section class="mt-[160px] max-w-custom mx-auto px-[20px] 2xl:px-0">
+<section class="mt-[88px] md:mt-[100px] custom-container">
     <div class="flex items-center justify-between">
-        <h3 class="text-[36px] leading-[44px] text-text-black dark:text-text-dark-black font-[600]">Frilanserlər</h3>
+        <h3 class="text-[24px] md:text-[36px] leading-[44px] text-text-black dark:text-text-dark-black font-[600]">Frilanserlər</h3>
     </div>
-    <div class="mt-[48px] grid grid-cols-2 place-items-center gap-[24px]">
-        <div class="grid grid-cols-3 gap-[22px]">
+    <div class="mt-[36px] md:mt-[48px] md:grid md:grid-cols-2  md:gap-[24px]">
+        <div class="hidden md:grid grid-cols-3 gap-[22px]">
             <div class="w-[184px] h-[184px] rounded-full">
                 <img class="w-full h-full object-cover rounded-full" src="https://i0.wp.com/pixahive.com/wp-content/uploads/2021/02/An-Indian-boy-375075-pixahive.jpg?fit=1702%2C2560&ssl=1" alt="">
             </div>
@@ -23,23 +23,67 @@
                 <img class="w-full h-full object-cover rounded-full" src="https://i0.wp.com/pixahive.com/wp-content/uploads/2021/02/An-Indian-boy-375075-pixahive.jpg?fit=1702%2C2560&ssl=1" alt="">
             </div>
         </div>
-        <div>
-            <h4 class="text-[32px] leading-[32px] font-[600] text-text-black dark:text-text-dark-black ">Tanış olun: istedadlı freelancerlərimiz</h4>
-            <p class="mt-[16px] leading-[24px] text-text-black dark:text-text-dark-black">Yaradıcılıq gücümüz və sizin tələblərinizə uyğun yüksək keyfiyyətli işlər təqdim etməyə həsr olunmuş peşəkarlar.</p>
-            <div class="mt-[52px] flex items-center gap-[12px]"> 
-                <span class="border-b border-text-black text-[32px] font-[500] p-[4px]  text-text-black dark:text-text-dark-black">100+</span>
-                <span class="text-[18px] leading-[26px] font-[500] text-text-black dark:text-text-dark-black">Peşəkar xidmət</span>
+        <div class="flex flex-col">
+            <h4 class="text-[20px] leading-[28px] md:text-[32px] md:leading-[32px] font-[600] text-text-black dark:text-text-dark-black ">Tanış olun: istedadlı freelancerlərimiz</h4>
+            <p class="text-[12px] md:text-[16px] mt-[12px] md:mt-[16px] leading-[24px] text-text-gray dark:text-text-dark-black">Yaradıcılıq gücümüz və sizin tələblərinizə uyğun yüksək keyfiyyətli işlər təqdim etməyə həsr olunmuş peşəkarlar.</p>
+            <div class="mt-[24px] md:mt-[52px] flex items-center md:gap-[12px]"> 
+                <span class="md:border-b border-text-black text-[20px] md:text-[32px] font-[600] md:font-[500] p-[4px]  text-text-black dark:text-text-dark-black">100+</span>
+                <span class="text-[18px] leading-[26px] font-[600] md:font-[500] text-text-black dark:text-text-dark-black">Peşəkar xidmət</span>
             </div>
-            <p class="mt-[12px] text-[14px] font-[300] leading-[24px] text-text-black dark:text-text-dark-black">Freelancerlərimiz ilə iş birliyində, siz həmişə keyfiyyətli nəticələrə güvənə bilərsiniz.</p>
-            <div class="relative mt-[24px]">
-                <button class="bg-primary font-[500] w-[111px] h-[52px] rounded-[20px]">Daha çox</button>
-                <a class="absolute top-0 left-[95px] w-[52px] h-[52px] border border-text-black rounded-full bg-[#FBF9F1] hover:bg-[#d1cdbe] transition-all grid place-items-center" href="">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.7109 19.705L22.7476 12.1042L15.1468 10.0675" stroke="#344054" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M9.25195 19.8958L22.6126 12.182" stroke="#344054" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+            <p class="text-[12px] md:text-[16px] mt-[12px] md:mt-[16px] leading-[24px] text-text-gray dark:text-text-dark-black">Freelancerlərimiz ilə iş birliyində, siz həmişə keyfiyyətli nəticələrə güvənə bilərsiniz.</p>
+            <div class="flex-grow md:flex items-end hidden">
+                <a href="#" class="relative flex gap-[8px] items-center">
+                    <span class="stroke-text-black text-[24px] font-[500]">Daha çox</span>
+                    {% include "components/ui/icons/AxesTopRight.html" with color="text-black" %}
                 </a>
             </div>
         </div>
+        <div class="swiper freelancerSwipper mt-[51px] md:!hidden absolute">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="w-[124px] h-[124px] md:w-[184px] md:h-[184px] rounded-full">
+                    <img class="w-full h-full object-cover rounded-full" src="https://i0.wp.com/pixahive.com/wp-content/uploads/2021/02/An-Indian-boy-375075-pixahive.jpg?fit=1702%2C2560&ssl=1" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w-[124px] h-[124px] md:w-[184px] md:h-[184px] rounded-full">
+                    <img class="w-full h-full object-cover rounded-full" src="https://i0.wp.com/pixahive.com/wp-content/uploads/2021/02/An-Indian-boy-375075-pixahive.jpg?fit=1702%2C2560&ssl=1" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w-[124px] h-[124px] md:w-[184px] md:h-[184px] rounded-full">
+                    <img class="w-full h-full object-cover rounded-full" src="https://i0.wp.com/pixahive.com/wp-content/uploads/2021/02/An-Indian-boy-375075-pixahive.jpg?fit=1702%2C2560&ssl=1" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w-[124px] h-[124px] md:w-[184px] md:h-[184px] rounded-full">
+                    <img class="w-full h-full object-cover rounded-full" src="https://i0.wp.com/pixahive.com/wp-content/uploads/2021/02/An-Indian-boy-375075-pixahive.jpg?fit=1702%2C2560&ssl=1" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w-[124px] h-[124px] md:w-[184px] md:h-[184px] rounded-full">
+                    <img class="w-full h-full object-cover rounded-full" src="https://i0.wp.com/pixahive.com/wp-content/uploads/2021/02/An-Indian-boy-375075-pixahive.jpg?fit=1702%2C2560&ssl=1" alt="">
+                </div>
+              </div>
+            </div>
+            {% comment %} <div class="swiper-pagination"></div> {% endcomment %}
+        </div>
+        <div class="md:hidden flex justify-end">
+            <a class="relative mt-[32px] flex gap-[8px] items-center">
+                <span class="stroke-text-black font-[500]">Daha çox</span>
+                {% include "components/ui/icons/AxesTopRight.html" with color="text-black" %}
+            </a>
+        </div>
     </div>
 </section>
+
+<script>
+    var swiper = new Swiper(".freelancerSwipper", {
+      slidesPerView: 2.2,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>

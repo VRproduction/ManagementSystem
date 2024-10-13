@@ -5,7 +5,7 @@
         content: '';
         position: absolute;
         width: 0;
-        height: 2.8px;
+        height: 2px;
         bottom: -3px;
         left: 50%;
         background-color: black;
@@ -24,13 +24,12 @@
         bottom: -7px;
         left: 50%;
         transform: translateX(-50%);
-        width: 10px;
-        height: 2.6px;
+        width: 100%;
+        height: 2px;
         background-color: black;
-        border-radius: 50%;
       }
   </style>
-<header class="hidden lg:block bg-secondary border-b border-b-[#D0D0D0] dark:bg-secondary-dark">
+<header class="hidden lg:block bg-secondary  dark:bg-secondary-dark">
       <div class="custom-container h-[88px] flex justify-between items-center">
         <div>
             <img class="w-[234px]" src="{{settings.logo.url}}" alt="">
@@ -62,14 +61,6 @@
         <div class="flex gap-[16px]">
           <a class="border rounded-[16px] px-[14px] py-[10px] border-primary dark:border-primary-dark bg-secondary dark:bg-secondary-dark text-text-black dark:text-text-dark-black" href="{% url 'login' %}">Daxil ol</a>
           <a class="border rounded-[16px] px-[14px] py-[10px] border-primary dark:border-primary-dark bg-primary text-text-black dark:text-text-dark-black dark:bg-primary-dark hover:bg-primary-hover hover:border-primary-hover transition-all" href="{% url 'register' %}">Qeydiyyat</a>
-            <button id="theme-toggle">
-              <div id="sun-icon">
-                {% include "components/ui/icons/Sun.html" %}
-              </div>
-              <div id="moon-icon">
-                {% include "components/ui/icons/Moon.html" %}
-              </div>
-            </button>
         </div>
   </div>
 </header>
