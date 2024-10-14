@@ -1,62 +1,54 @@
-<section class="custom-container mt-[160px]">
-    <h2 class="text-[40px] font-[500] text-text-black dark:text-text-dark-black">Üstünlüklərimiz</h2>
-    <div class="grid items-center grid-cols-2 gap-[24px]">
-        <div class="mt-[24px]">
-            <h3 class="text-[56px] font-[600] text-text-black dark:text-text-dark-black leading-[64px] w-[80%]">Peşəkar Xidmət
-                Task <span class="text-primary">Frieslə</span>
-                sizə daha yaxın..
-            </h3>
-            <div class="mt-[68px]">
-                <div class="flex justify-end">
-                    <div class="border border-[#DDDDDD] bg-white rounded-[24px] py-[12px] px-[31px] flex items-center gap-[8px]">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.1333 21.6L23.5333 12.2L21.6667 10.3333L14.1333 17.8667L10.3333 14.0667L8.46667 15.9333L14.1333 21.6ZM6.66667 28C5.93333 28 5.30556 27.7389 4.78333 27.2167C4.26111 26.6944 4 26.0667 4 25.3333V6.66667C4 5.93333 4.26111 5.30556 4.78333 4.78333C5.30556 4.26111 5.93333 4 6.66667 4H25.3333C26.0667 4 26.6944 4.26111 27.2167 4.78333C27.7389 5.30556 28 5.93333 28 6.66667V25.3333C28 26.0667 27.7389 26.6944 27.2167 27.2167C26.6944 27.7389 26.0667 28 25.3333 28H6.66667Z" fill="#F5AB20"/>
-                        </svg>
-                        <span class="text-[18px] font-[600] tracking-wider text-text-black ">100% Güvənilir</span>
-                    </div>
-                </div>
-                <div class="flex justify-center w-full mt-[36px]">
-                    <div class="border border-[#DDDDDD] bg-white rounded-[24px] w-[232px] py-[12px] px-[16px] flex flex-col items-center">
-                        <div class="flex items-center">
-                            <span class="text-[36px] font-[700] text-primary">30K</span>
-                            <span class="text-[26px] font-[500] ">+</span>
-                        </div>
-                        <p class="text-[24px] font-[600] text-center">
-                            İşə götürülmə sayı
-                        </p>
-                    </div>
-                </div>
-                <div class="flex justify-start mt-[36px]">
-                    <div class="border border-[#DDDDDD] bg-white rounded-[24px] py-[12px] px-[31px] flex items-center gap-[8px]">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.1333 21.6L23.5333 12.2L21.6667 10.3333L14.1333 17.8667L10.3333 14.0667L8.46667 15.9333L14.1333 21.6ZM6.66667 28C5.93333 28 5.30556 27.7389 4.78333 27.2167C4.26111 26.6944 4 26.0667 4 25.3333V6.66667C4 5.93333 4.26111 5.30556 4.78333 4.78333C5.30556 4.26111 5.93333 4 6.66667 4H25.3333C26.0667 4 26.6944 4.26111 27.2167 4.78333C27.7389 5.30556 28 5.93333 28 6.66667V25.3333C28 26.0667 27.7389 26.6944 27.2167 27.2167C26.6944 27.7389 26.0667 28 25.3333 28H6.66667Z" fill="#F5AB20"/>
-                        </svg>
-                        <span class="text-[18px] font-[600] tracking-wider text-text-black ">100% Güvənilir</span>
-                    </div>
+<section class="custom-container mt-[88px] md:mt-[200px]">
+    <h3 class="text-[32px] md:text-[56px] font-[600] text-text-black dark:text-text-dark-black leading-[44px] md:leading-[72px] md:w-[70%]">Peşəkar Xidmət
+        Task <span class="text-primary">Frieslə</span>
+        sizə daha yaxın..
+    </h3>
+    <div class="mt-[48px] md:mt-[72px] grid items-center md:grid-cols-2 gap-[48px] md:gap-[70px]">
+        <div class="space-y-[32px] md:space-y-0 flex h-full flex-col justify-between">
+            <div class="flex justify-start">
+                <div class="bg-primary rounded-[12px] py-[8px] md:py-[24px] px-[20px] md:px-[32px] flex items-center gap-[12px]">
+                    {% include "components/ui/icons/Checkmark.html" %}
+                    <span class="md:text-[32px] leading-[40px] font-[600] tracking-wider text-text-white ">100% Güvənilir</span>
                 </div>
             </div>
-            
+            <div class="flex justify-center w-full">
+                <div class="bg-primary text-text-white rounded-[12px] py-[20px] md:py-[32px] px-[20px] md:px-[70px] flex flex-col items-center">
+                    <div class="flex items-center gap-[4px]">
+                        <span class="text-[36px] md:text-[48px] font-[600]">30K</span>
+                        <span class="text-[32px] font-[600] ">+</span>
+                    </div>
+                    <p class="text-[20px] md:text-[24px] font-[500] text-center">
+                        İşə götürülmə sayı
+                    </p>
+                </div>
+            </div>
+            <div class="flex justify-end">
+                <div class="bg-primary rounded-[12px] py-[8px] md:py-[24px] px-[32px] flex items-center gap-[12px]">
+                    {% include "components/ui/icons/Checkmark.html" %}
+                    <span class="md:text-[32px] leading-[40px] font-[600] tracking-wider text-text-white ">100% Güvənilir</span>
+                </div>
+            </div>
         </div>
-        <div class="space-y-[36px]">
+        <div class="space-y-[24px]">
           <!-- Card 1 -->
-          <div class="bg-secondary border border-[#DDDDDD] dark:bg-secondary-dark rounded-[24px] p-[16px] flex items-center gap-[16px]">
+          <div class="bg-secondary border border-borderDefault dark:bg-secondary-dark rounded-[20px] px-[9.5px] py-[16px] md:px-[16px] md:py-[24px] flex items-center gap-[16px]">
             <span class="text-primary font-[500] text-[24px] leading-[36px]">01</span>
-            <p class="text-[20px] leading-[28px] font-[500] text-text-black dark:text-text-dark-black">Without a big budget, it's hard to approach venture investors</p>
+            <p class="text-[12px] md:text-[20px] leading-[16px] md:leading-[28px] font-[500] text-text-black dark:text-text-dark-black">Freelancerlər öz iş saatlarını və layihələrini seçərək, rahat bir iş mühiti yaradırlar</p>
           </div>
           <!-- Card 2 -->
-          <div class="bg-secondary border border-[#DDDDDD] dark:bg-secondary-dark rounded-[24px] p-[16px] flex items-center gap-[16px]">
+          <div class="bg-secondary border border-borderDefault dark:bg-secondary-dark rounded-[20px] px-[9.5px] py-[16px] md:px-[16px] md:py-[24px] flex items-center gap-[16px]">
             <span class="text-primary font-[500] text-[24px] leading-[36px]">02</span>
-            <p class="text-[20px] leading-[28px] font-[500] text-text-black dark:text-text-dark-black">VCs don't care about your DeFi idea — only their gains</p>
+            <p class="text-[12px] md:text-[20px] leading-[16px] md:leading-[28px] font-[500] text-text-black dark:text-text-dark-black">Freelancerlər öz iş saatlarını və layihələrini seçərək, rahat bir iş mühiti yaradırlar</p>
           </div>
           <!-- Card 3 -->
-          <div class="bg-secondary border border-[#DDDDDD] dark:bg-secondary-dark rounded-[24px] p-[16px] flex items-center gap-[16px]">
+          <div class="bg-secondary border border-borderDefault dark:bg-secondary-dark rounded-[20px] px-[9.5px] py-[16px] md:px-[16px] md:py-[24px] flex items-center gap-[16px]">
             <span class="text-primary font-[500] text-[24px] leading-[36px]">03</span>
-            <p class="text-[20px] leading-[28px] font-[500] text-text-black dark:text-text-dark-black">They force you into selling your tokens at a huge discount...</p>
+            <p class="text-[12px] md:text-[20px] leading-[16px] md:leading-[28px] font-[500] text-text-black dark:text-text-dark-black">Freelancerlər öz iş saatlarını və layihələrini seçərək, rahat bir iş mühiti yaradırlar</p>
           </div>
           <!-- Card 4 -->
-          <div class="bg-secondary border border-[#DDDDDD] dark:bg-secondary-dark rounded-[24px] p-[16px] flex items-center gap-[16px]">
+          <div class="bg-secondary border border-borderDefault dark:bg-secondary-dark rounded-[20px] px-[9.5px] py-[16px] md:px-[16px] md:py-[24px] flex items-center gap-[16px]">
             <span class="text-primary font-[500] text-[24px] leading-[36px]">04</span>
-            <p class="text-[20px] leading-[28px] font-[500] text-text-black dark:text-text-dark-black">...Then dump them at the first opportunity</p>
+            <p class="text-[12px] md:text-[20px] leading-[16px] md:leading-[28px] font-[500] text-text-black dark:text-text-dark-black">Freelancerlər öz iş saatlarını və layihələrini seçərək, rahat bir iş mühiti yaradırlar</p>
           </div>
         </div>
       </div>
