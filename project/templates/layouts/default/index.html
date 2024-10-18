@@ -31,13 +31,16 @@
 </head>
 
 <body class="bg-background dark:bg-background-dark" >
+
+    {% include "components/ui/loading/Loading.html" %}
+    
     {% include "layouts/default/components/header/Header.html" %}
     {% include "layouts/default/components/header/HeaderBottom.html" %}
     {% include "layouts/default/components/header/MobileHeader.html" %}
 
-    {% block main %}
-
-    {% endblock main %}
+    <div class="mt-[60px] md:mt-0">
+        {% block main %}{% endblock main %}
+    </div>
 
     {% include "layouts/default/components/footer/Footer.html" %}
 

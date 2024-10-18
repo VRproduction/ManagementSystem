@@ -1,17 +1,20 @@
-<section class="h-[calc(100vh-87px)] custom-container grid grid-cols-2 gap-[24px] place-items-center">
-    <div>
-        <h2 class="text-[40px] leading-[48px] font-[500] text-text-black dark:text-text-dark-black">Peşəkar frilanserlər və işəgötürənlər üçün platform</h2>
-        <p class="text-[22px] mt-[20px] leading-[36px] text-text-black dark:text-text-dark-black">
-            Dizayn yaratmaq indi daha asandır. Alətlərimiz və şablonlarımızla istədiyiniz layihələri həyata keçirin.
-        </p>
-        <div class="relative mt-[24px]">
-            <button class="bg-primary font-[500] w-[125px] h-[52px] rounded-[20px]">Frilanser ol</button>
-            <a class="absolute top-0 left-[109px] w-[52px] h-[52px] border border-text-black rounded-full bg-[#FBF9F1] hover:bg-[#d1cdbe] transition-all grid place-items-center" href="">
-                {% include "components/ui/icons/AxesTopRight.html" %}
-            </a>
+{% load static %}
+
+<section class="custom-container  md:h-[calc(100vh-165px)] grid  md:grid-cols-2 gap-[40px] md:gap-[128px]">
+    <div class="flex w-full items-center mt-[24px] md:mt-0">
+        <div class="w-full">
+            <h2 class="text-[24px] md:text-[48px]  font-[600] leading:[32px] md:leading-[56px] text-text-black dark:text-text-dark-black">
+                Peşəkar frilanserlər və işəgötürənlər üçün platform
+            </h2>
+            <p class="text-[12px] md:text-[22px] font-[400]  mt-[20px] leading-[16px] md:leading-[36px] text-text-gray dark:text-text-dark-black">
+                Dizayn yaratmaq indi daha asandır. Alətlərimiz və şablonlarımızla istədiyiniz layihələri həyata keçirin.
+            </p>
+            <div class="mt-[47px] md:mt-[64px] md:flex">
+                {% include "components/ui/buttons/BeFreelancerBtn.html" %}
+            </div>
         </div>
     </div>
-    <div>
-        <img class="rounded-[22px]" src="https://s3-alpha-sig.figma.com/img/23b5/577d/bd917e50ddb5b1fa765773108d44c859?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HQXO8llLDwVmkEKv2EbiM9mOrW~h9P-qI91jgF7R30TnBoAFYkcH~5MIvq1LIOnV1~Jy6M~6KH-qEKOXRQBWvb~niGVT91EWsl1sA5bfiLGMKojW3wI2OGI0uqu2dy1c43WU4W7Dalx4OPEQDbTymkAzeY07ohMmREAGabLlhIimD5AkvW~ci6uo7kOFJnJPRS32EVQLp3rYEYwFzGTJVio1lsRnYoNtAQ~RXpkvJqAgxWu4Rz1A3PV2eyYfejD4hLIjYILXRwFkaHk4RLT4yPqprcRIlHQwQsM-qIXkVQB22NX0weGHNGc2FrqIswkPq3Vye31CZVRKUBzpOBIbWw__" alt="">
+    <div class="flex items-center justify-center md:justify-end">
+        <img class="object-cover w-full  md:w-[497px] md:h-[496px]" src="{% static "images/grid.png" %}" alt="Hero">
     </div>
 </section>

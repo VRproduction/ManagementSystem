@@ -1,0 +1,39 @@
+<section class="mt-[88px] md:mt-[112px] custom-container">
+    <div class="flex justify-between">
+        <h2 class="text-text-black text-[32px] font-[500] leading-[44px]">Paketlər</h2>
+        <div class="flex items-center gap-[16px]">
+            <button class="bg-secondary border border-borderDefault w-[52px] h-[52px] rounded-full grid place-items-center">
+                {% include "components/ui/icons/Search.html" with width="24" height="24"  %}
+            </button>
+            <div class="flex gap-[8px]">
+                <button class="bg-secondary border border-borderDefault py-[14px] px-[20px] rounded-[28px] flex gap-[8px] items-center">
+                    <span class="text-[18px] text-text-black">Servis</span>
+                    {% include "components/ui/icons/AxesBottom.html" with width="20" height="20" %}
+                </button>
+                <button class="bg-secondary border border-borderDefault py-[14px] px-[20px] rounded-[28px] flex gap-[8px] items-center">
+                    <span class="text-[18px] text-text-black">Kateqoriya</span>
+                    {% include "components/ui/icons/AxesBottom.html" with width="20" height="20" %}
+                </button>
+                <button class="bg-secondary border border-borderDefault py-[14px] px-[20px] rounded-[28px] flex gap-[8px] items-center">
+                    <span class="text-[18px] text-text-black">Reytinq</span>
+                    {% include "components/ui/icons/AxesBottom.html" with width="20" height="20" %}
+                </button>
+                <button class="bg-secondary border border-borderDefault py-[14px] px-[20px] rounded-[28px] flex gap-[8px] items-center">
+                    <span class="text-[18px] text-text-black">Qiymət</span>
+                    {% include "components/ui/icons/AxesBottom.html" with width="20" height="20" %}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mt-[88px] grid grid-cols-3 gap-[24px]">
+        {% include "components/common/package/PackageItem.html" %}
+        {% include "components/common/package/PackageItem.html" %}
+        {% include "components/common/package/PackageItem.html" %}
+        {% include "components/common/package/PackageItem.html" %}
+        {% include "components/common/package/PackageItem.html" %}
+        {% include "components/common/package/PackageItem.html" %}
+        {% include "components/common/package/PackageItem.html" %}
+        {% include "components/common/package/PackageItem.html" %}
+        {% include "components/common/package/PackageItem.html" %}
+    </div>
+</section>

@@ -1,13 +1,64 @@
 {% extends "layouts/default/index.html" %}
+{% load static %}
 
 {% block main %}
+<section class="pt-[24px] md:pt-[48px] custom-container">
+    <h2 class="text-text-black leading-[32px] md:leading-[56px] text-[24px] md:text-[48px] font-[600]">Oxu düşün, kəşf et</h2>
+    <p class="mt-[20px] text-text-gray text-[12px] md:text-[22px] leading-[16px] md:leading-[36px]">Maraqlandığın mövzularda yeni yazılarla biliklərini genişləndir.Maraqlandığın mövzularda yeni yazılarla biliklərini genişləndir.</p>
+</section>
 
-{% include "pages/blog/components/Search.html" %}
+<section class="mt-[36px] md:mt-[64px] custom-container">
+    <div class="relative w-full h-[355px] md:h-[652px] rounded-[20px] overflow-hidden">
+        <div class="absolute w-full h-full overflow-hidden">
+            <img class="h-full w-full object-cover" src="{% static "images/grid.png" %}" alt="">
+        </div>
+        <div class="absolute bottom-0 h-[50%] md:h-[30%] w-full bg-black/40 blur-0 px-[20px] py-[16px] md:p-[24px]">
+            <h3 class="text-text-white text-[16px] md:text-[32px] font-[500] leading-[24px] md:leading-[40px]">Dizaynerlərin Uğurları və Yeni Yaradıcı Hərəkətlər!</h3>
+            <p class="mt-[16px] text-[#F4F5F5] text-[12px] md:text-[20px] leading-[16px] md:leading-[28px]">Bu gün dizaynerlərin istifadə etdiyi ən yeni proqramlar və alətlər haqqında məlumat al, onların yaradıcılıq prosesinə necə təsir etdiyini öyrən.</p>
+            <p class="mt-[20px] text-[#F4F5F5] text-[12px] md:text-[14px] font-[500]">24 sentyabr 2024</p>
+        </div>
+    </div>
+</section>
 
-{% include "pages/blog/components/AllBlogs.html" %}
+<section class="mt-[148px] custom-container">
+    <h2 class="text-text-black text-[36px] font-[500]">Bloqlar</h2>
+    
+    <div class="mt-[64px] grid grid-cols-3 gap-x-[24px] gap-y-[32px]">
+        {% include "components/common/blog/BlogItem.html" %}
+        {% include "components/common/blog/BlogItem.html" %}
+        {% include "components/common/blog/BlogItem.html" %}
+        {% include "components/common/blog/BlogItem.html" %}
+        {% include "components/common/blog/BlogItem.html" %}
+        {% include "components/common/blog/BlogItem.html" %}
+    </div>
 
-{% include "pages/blog/components/InterestedBlogs.html" %}
+    <div class="mt-[72px]">
+        {% include "components/ui/pagination/Pagination.html" %}
+    </div>
 
-{% include "pages/blog/components/BeWarned.html" %}
+</section>
+
+<section class="mt-[132px] custom-container">
+    <h2 class="text-text-black text-[36px] font-[500]">Populyar Bloqlar</h2>
+    
+    <div class="mt-[64px] grid grid-cols-3 gap-x-[24px] gap-y-[32px]">
+        {% include "components/common/blog/BlogItem.html" %}
+        {% include "components/common/blog/BlogItem.html" %}
+        {% include "components/common/blog/BlogItem.html" %}
+    </div>
+</section>
+
+<section class="custom-container mt-[176px]">
+    <div class="bg-secondary p-[48px] flex justify-between items-center">
+        <div class="w-[37%]">
+            <h2 class="text-[48px] font-[500] leading-[56px]">Abunə olun</h2>
+            <p class="mt-[12px] text-[20px] leading-[28px] text-text-gray">Bütün yeniliklərdən xəbərdar olmaq üçün abunə ola bilərsiniz.</p>
+        </div>
+        <div class="rounded-[20px] h-[72px] w-[503px] flex gap-[16px] items-center justify-between p-[16px] border border-borderDefault">
+            <input class=" flex-1 border-black p-0 bg-transparent border-0 focus:ring-0 focus:outline-none" type="text" placeholder="Emailinizi daxil edin">
+            {% include "components/ui/buttons/SubscribeBtn.html" %}
+        </div>
+    </div>
+</section>
 
 {% endblock main %}

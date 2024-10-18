@@ -1,17 +1,27 @@
 {% load nav_links %}
 
-
-    <div class="custom-container lg:hidden fixed top-0 w-full bg-secondary h-[89px] flex items-center justify-between z-[1000]">
+    <div class="custom-container lg:hidden fixed top-0 w-full bg-secondary h-[60px] flex items-center justify-between z-[1000]">
       <div class="flex items-center gap-[12px]">
         <button id="menu-btn" class="relative h-8 w-8 focus:outline-none">
           <!-- Hamburger Icon -->
-          <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-8 w-8 transition-all duration-300 ease-in-out transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg id="hamburger-icon" class="absolute inset-0 h-8 w-8 transition-all duration-300 ease-in-out transform"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="#212121" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+            
+          <!-- Close Icon -->
+          <svg id="close-icon" class="absolute inset-0 h-8 w-8 transition-all duration-300 ease-in-out transform scale-0"  width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.3428 10.3438L21.6565 21.6575" stroke="#141313" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.3435 21.6575L21.6572 10.3438" stroke="#141313" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <!-- Hamburger Icon -->
+          {% comment %} <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-8 w-8 transition-all duration-300 ease-in-out transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
           <!-- Close Icon -->
-          <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-8 w-8 transition-all duration-300 ease-in-out transform scale-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svgxmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-8 w-8 transition-all duration-300 ease-in-out transform scale-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+          </svg>   {% endcomment %}
+            
         </button>
         <div>
           <img src="{{settings.logo.url}}" alt="Logo" class="w-[140px]">
@@ -19,7 +29,7 @@
       </div>
       <div class="flex items-center gap-[17px]">
         <button class="grid place-items-center w-[24px] h-[24px] rounded-full bg-background">
-          {% include "components/ui/icons/Search.html" %}
+          {% include "components/ui/icons/Search.html" with width="20" height="20" %}
         </button>
         <a href="{% url "home" %}">
           {% include "components/ui/icons/Account.html" %}
@@ -28,7 +38,7 @@
     </div>
     
     <!-- Mobile Menu (Initially hidden) -->
-    <nav id="mobile-menu" class="lg:hidden  bg-secondary w-[55%] h-screen fixed top-[89px] ml-[-100%]  transition-all ease-in-out z-50">
+    <nav id="mobile-menu" class="lg:hidden  bg-secondary w-[55%] h-screen fixed top-[60px] ml-[-100%]  transition-all ease-in-out z-50">
       <ul class="space-y-[16px] mt-[29px]">
         <!-- Active link with dot -->
         <li class="relative hover-underline text-center">
@@ -39,10 +49,13 @@
           <a href="{% url "about" %}" class="relative {% active_link 'about' %}">Haqqımızda</a>
         </li>
         <li class="relative hover-underline text-center">
-          <a href="#" class="">Virtual ofislar</a>
+          <a href="{% url "virtual-offices" %}" class="relative {% active_link 'virtual-offices' %}">Virtual ofislar</a>
         </li>
         <li class="relative hover-underline text-center">
           <a href="{% url "freelancer" %}" class="relative {% active_link 'freelancer' %}">Frilanserlər</a>
+        </li>
+        <li class="relative hover-underline text-center">
+          <a href="{% url "packages" %}" class="relative {% active_link 'packages' %}">Paketlər</a>
         </li>
         <li class="relative hover-underline text-center">
           <a href="{% url "blog" %}" class="relative {% active_link 'blog' %}">Bloq</a>
@@ -70,7 +83,7 @@
       </div>
     </nav>
     
-    <div id="background-overlay" class="h-screen fixed w-[45%] top-[89px]  right-0  transition-all ease-in-out"></div>
+    <div id="background-overlay" class="md:hidden h-screen fixed w-[45%] top-[60px]  right-0  transition-all ease-in-out"></div>
   
   </header>
   

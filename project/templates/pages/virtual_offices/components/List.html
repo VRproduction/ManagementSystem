@@ -1,0 +1,80 @@
+<style>
+    .virtualOfficeSwipper .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: #898989; /* Change this to your desired color */
+        opacity: 1; /* Set the opacity to make sure the color is visible */
+    }
+
+    .virtualOfficeSwipper .swiper-pagination-bullet-active {
+        width: 12px;
+        height: 12px;
+        background-color: #F5AB20; /* Change the color for the active dot */
+    }
+</style>
+
+<section class="mt-[88px] md:mt-0 custom-container">
+    <div class="flex items-center justify-between">
+        <h3 class="text-[24px] md:text-[36px] leading-[44px] text-text-black dark:text-text-dark-black font-[600]">Virtual ofislər</h3>
+        <div class="hidden md:block">
+            <a href="#" class="relative flex gap-[8px] items-center md:hidden">
+                <span class="stroke-text-black text-[24px] font-[500]">Daha çox</span>
+                {% include "components/ui/icons/AxesTopRight.html" with color="text-black" %}
+            </a>
+        </div>
+    </div>
+    <div class="mt-[48px] hidden md:grid grid-cols-3 gap-[24px]">
+        {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+        {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+        {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+        {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+        {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+        {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+    </div>
+    <div class="swiper virtualOfficeSwipper mt-[24px] md:!hidden">
+        <div class="swiper-wrapper mb-[60px]">
+            <div class="swiper-slide">
+                {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+            </div>  
+            <div class="swiper-slide">
+                {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+            </div> 
+            <div class="swiper-slide">
+                {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+            </div> 
+            <div class="swiper-slide">
+                {% include "components/common/virtual_office/VirtualOfficeItem.html" %}
+            </div> 
+        </div>
+        <div class="swiper-pagination flex items-center justify-center"></div>
+    </div>
+</section>
+
+<script>
+    var swiper = new Swiper(".virtualOfficeSwipper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        492: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+          },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2.5,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
