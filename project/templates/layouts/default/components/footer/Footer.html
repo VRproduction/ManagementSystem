@@ -15,10 +15,13 @@
             <a href="{% url "about" %}" class="relative {% active_link 'about' %}">Haqqımızda</a>
           </li>
           <li class="relative hover-underline text-center text-text-black">
-            <a href="#">Virtual ofislar</a>
-          </li>
+            <a href="{% url "virtual-offices" %}" class="relative {% active_link 'virtual-offices' %}">Virtual ofislar</a>
+        </li>
           <li class="relative hover-underline text-center text-text-black">
             <a href="{% url "freelancer" %}" class="relative {% active_link 'freelancer' %}">Frilanserlər</a>
+          </li>
+          <li class="relative hover-underline text-center text-text-black">
+            <a href="{% url "packages" %}" class="relative {% active_link 'packages' %}">Paketlər</a>
           </li>
           <li class="relative hover-underline text-center text-text-black">
             <a href="{% url "blog" %}" class="relative {% active_link 'blog' %}">Bloq</a>

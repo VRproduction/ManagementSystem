@@ -1,33 +1,35 @@
 {% load nav_links %}
 {% load static %}
 <style>
-    .hover-underline::before {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -3px;
-        left: 50%;
-        background-color: black;
-        transition: width 0.3s ease, left 0.3s ease;
-      }
+  .hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 50%;
+    background-color: black;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  /* Active link default dot */
+  .active-dot::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
   
-      .hover-underline:hover::before {
-        width: 100%;
-        left: 0;
-      }
-  
-      /* Active link default dot */
-      .active-dot::after {
-        content: '';
-        position: absolute;
-        bottom: -7px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        height: 2px;
-        background-color: black;
-      }
+  @media (min-width: 768px) {
+    .hover-underline:hover::before {
+      width: 100%;
+      left: 0;
+    }
+  }
+    
   </style>
 <header class="hidden lg:block bg-secondary  dark:bg-secondary-dark">
       <div class="custom-container h-[88px] flex justify-between items-center">
@@ -35,7 +37,7 @@
             <img class="w-[234px]" src="{{settings.logo.url}}" alt="">
         </div>
         <div>
-            <ul class="flex gap-[36px] font-normal text-[16px] text-text-black dark:text-text-dark-black">
+            <ul class="flex gap-[24px] font-normal text-[16px] text-text-black dark:text-text-dark-black">
               <!-- Active link with dot -->
               <li class="relative hover-underline">
                 <a href="{% url "home" %}" class="relative {% active_link 'home' %}">Ana səhifə</a>
@@ -45,10 +47,13 @@
                 <a href="{% url "about" %}" class="relative {% active_link 'about' %}">Haqqımızda</a>
               </li>
               <li class="relative hover-underline">
-                <a href="#">Virtual ofislar</a>
+                <a href="{% url "virtual-offices" %}" class="relative {% active_link 'virtual-offices' %}">Virtual ofislar</a>
               </li>
               <li class="relative hover-underline">
                 <a href="{% url "freelancer" %}" class="relative {% active_link 'freelancer' %}">Frilanserlər</a>
+              </li>
+              <li class="relative hover-underline">
+                <a href="{% url "packages" %}" class="relative {% active_link 'packages' %}">Paketlər</a>
               </li>
               <li class="relative hover-underline">
                 <a href="{% url "blog" %}" class="relative {% active_link 'blog' %}">Bloq</a>
@@ -59,8 +64,8 @@
             </ul>
         </div>
         <div class="flex gap-[16px]">
-          <a class="border rounded-[16px] px-[14px] py-[10px] border-primary dark:border-primary-dark bg-secondary dark:bg-secondary-dark text-text-black dark:text-text-dark-black" href="{% url 'login' %}">Daxil ol</a>
-          <a class="border rounded-[16px] px-[14px] py-[10px] border-primary dark:border-primary-dark bg-primary text-text-black dark:text-text-dark-black dark:bg-primary-dark hover:bg-primary-hover hover:border-primary-hover transition-all" href="{% url 'register' %}">Qeydiyyat</a>
+          {% include "components/ui/buttons/LoginBtn.html" %}
+          {% include "components/ui/buttons/RegisterBtn.html" %}
         </div>
   </div>
 </header>

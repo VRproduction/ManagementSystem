@@ -10,5 +10,7 @@ urlpatterns = [
     path("about/", AboutPageView.as_view(), name = 'about'),
     path("blog/", include('web.blog.urls')),
     path("freelancer/", include('web.freelancer.urls')),
+    path("packages/", include('web.packages.urls')),
+    path("virtual-offices/", include('web.virtual_offices.urls')),
     path("contact/", ContactPageView.as_view(), name = 'contact'),
 ]

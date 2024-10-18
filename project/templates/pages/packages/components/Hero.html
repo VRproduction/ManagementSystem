@@ -1,0 +1,14 @@
+{% load static %}
+
+<section class="mt-[41px] custom-container bg-secondary rounded-[20px] flex justify-between">
+    <div class="pt-[63px] pb-[45px] pl-[62px] w-[50%]">
+        <h2 class="text-[40px] font-[600] leading-[56px] text-text-black">Öz Paketini Yarat!</h2>
+        <p class="mt-[20px] text-text-gray text-[22px] leading-[36px]">İstəyinizə uyğun paket tapa bilmədiniz? Onda öz istəyinizə uyğun sorğu yaradın.</p>
+        <div class="mt-[40px]">
+            {% include "components/ui/buttons/CreatePackageBtn.html" %}
+        </div>
+    </div>
+    <div class="flex items-end pr-[90px]">
+        <img class="w-[269px] h-[257px]" src="{% static "images/grid.png" %}" alt="">
+    </div>
+</section>

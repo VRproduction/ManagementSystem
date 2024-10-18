@@ -1,0 +1,16 @@
+{% load static %}
+
+<section class="custom-container  md:h-[calc(100vh-165px)] grid  md:grid-cols-2 gap-[40px] md:gap-[128px]">
+    <div class="flex w-full items-center mt-[24px] md:mt-0">
+        <div class="w-full">
+            <h2 class="text-[24px] md:text-[48px]  font-[600] leading:[32px] md:leading-[56px] text-text-black dark:text-text-dark-black">Virtual Ofislər</h2>
+            <p class="text-[12px] md:text-[22px] font-[400]  mt-[20px] leading-[16px] md:leading-[36px] text-text-gray dark:text-text-dark-black">Dizayn yaratmaq indi daha asandır. Alətlərimiz və şablonlarımızla istədiyiniz layihələri həyata keçirin.</p>
+            <div class="mt-[47px] md:mt-[64px] md:flex">
+                {% include "components/ui/buttons/BeFreelancerBtn.html" %}
+            </div>
+        </div>
+    </div>
+    <div class="flex items-center justify-center md:justify-end">
+        <img class="object-cover w-full  md:w-[497px] md:h-[496px]" src="{% static "images/grid.png" %}" alt="Hero">
+    </div>
+</section>

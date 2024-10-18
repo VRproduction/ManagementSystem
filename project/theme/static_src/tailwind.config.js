@@ -29,7 +29,9 @@ module.exports = {
               primary: {
                 DEFAULT: '#F5AB20',       // Default primary
                 dark: '#E39500',          // Dark mode primary
-                hover: '#D58A00',         // Hover state in light mode
+                hover: '#F8C76A',         // Hover state in light mode
+                focus: '#DF9C1D',
+                disabled: "#FCE5BA",
                 darkHover: '#C37400',     // Dark mode hover
               },
               secondary: {
@@ -40,7 +42,7 @@ module.exports = {
               },
               text: {
                 white: '#FFFFFF',            // Beyaz metin
-                black: '#131313',            // Siyah metin
+                black: '#232323',            // Siyah metin
                 gray: '#898989',
                 disabled: '#DDDDDD',
                 hoverWhite: '#EAEAEA',       // Beyaz metin için hover durumu

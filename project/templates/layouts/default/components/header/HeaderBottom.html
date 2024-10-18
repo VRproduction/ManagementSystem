@@ -5,12 +5,12 @@
 
         <div class="w-[491px] h-[56px] border border-borderDefault flex justify-between items-center px-[24px] rounded-[57px]">
             <div class="flex items-center flex-1">
-                {% include "components/ui/icons/Search.html" %}
+                {% include "components/ui/icons/Search.html" with width="20" height="20" %}
                 <input class="mx-[8px] flex-1 border-black p-0 bg-transparent border-0 focus:ring-0 focus:outline-none" type="text" placeholder="Sizə maraqlı olanı axtarın">
             </div>
             <div class="border-l flex items-center gap-[4px]">
                 <span class="ml-[12px]">İstedad</span>
-                {% include "components/ui/icons/AxesBottom.html" %}
+                {% include "components/ui/icons/AxesBottom.html" with width="16" height="16" %}
             </div>
         </div>
     
@@ -18,7 +18,7 @@
         <button class="flex items-center gap-[4px]">
             {% include "components/ui/icons/Language.html" %}
             <span class="font-[500]">Az</span>
-            {% include "components/ui/icons/AxesBottom.html" %}
+            {% include "components/ui/icons/AxesBottom.html" with width="16" height="16" %}
         </button>
         <button class="theme-toggle">
             <div class="sun-icon">
