@@ -1,4 +1,6 @@
-<section class="custom-container  md:h-[calc(100vh-165px)] mt-[87px] md:mt-0 grid  md:grid-cols-2 gap-[40px] md:gap-[128px]">
+{% load static %}
+
+<section class="md:mt-[48px] custom-container grid  md:grid-cols-2 gap-[40px] md:gap-[128px]">
     <div class="flex w-full items-center mt-[24px] md:mt-0">
         <div class="w-full">
             <h2 class="text-[24px] md:text-[48px]  font-[600] leading:[32px] md:leading-[56px] text-text-black dark:text-text-dark-black">Haqqımızda</h2>
@@ -6,6 +8,6 @@
         </div>
     </div>
     <div class="flex items-center justify-center md:justify-end">
-        <img class="object-cover h-[230px] md:h-[496px]" src="{{about_us.image.url}}" alt="Hero">
+        <img class="object-cover h-[230px] md:h-[496px]" src="{% static "images/grid.png" %}" alt="Hero">
     </div>
 </section>

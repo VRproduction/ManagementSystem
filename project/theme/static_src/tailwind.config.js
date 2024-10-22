@@ -54,6 +54,16 @@ module.exports = {
                   hoverBlack: '#CCCCCC',      // Koyu modda siyah metin için hover durumu
                 },
               },
+              close:{
+                DEFAULT: '#F4F6FA',
+                hover: '#E0E4EB',
+                focus: '#B3C7E6'
+              },
+              delete:{
+                DEFAULT: '#FD134C',
+                hover: '#E60033',
+                focus: '#B30D39'
+              },
               background: {
                 DEFAULT: '#FBF9F6',          // Light mode background
                 dark: '#1A1A1A',             // Dark mode background (daha koyu)

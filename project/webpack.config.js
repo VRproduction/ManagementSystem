@@ -30,11 +30,11 @@ module.exports = {
       },
     ],
   },
-  mode: 'development',  // Geliştirme modunda çalıştırıyoruz
-  devtool: 'source-map', // Hata ayıklama için source-map kullanıyoruz
-  // mode: 'production',  // "development" modundan "production" moduna geçiş yapıldı
-  // devtool: false,
-  // optimization: {
-  //   minimize: true, // Dosyalar küçültülecek (minification)
-  // },
+  // mode: 'development',  // Geliştirme modunda çalıştırıyoruz
+  // devtool: 'source-map', // Hata ayıklama için source-map kullanıyoruz
+  mode: 'production',  // "development" modundan "production" moduna geçiş yapıldı
+  devtool: false,
+  optimization: {
+    minimize: true, // Dosyalar küçültülecek (minification)
+  },
 };

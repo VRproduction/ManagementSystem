@@ -1,14 +1,48 @@
 {% extends "layouts/dashboard/index.html" %}
 
 {% block main %}
-    <section class="grid grid-cols-3 gap-x-[25px] gap-[40px] mt-[186px]">
+    <div class="absolute top-[32px] h-[54px] flex items-center gap-[20px] leading-[20px]">
+        <a href="#" class="pb-[8px] border-b border-primary hover:border-primary-hover">Üzv olduğum virtual ofislərim</a>
+        <a href="#" class="pb-[8px] border-b border-transparent hover:border-primary-hover">Mənim virtual ofislərim</a>
+    </div>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center gap-[12px]">
+            <div class="bg-secondary rounded-[57px] h-[48px] w-[290px] flex justify-center items-center gap-[8px]">
+                {% include "components/ui/icons/Search.html" with width="24" height="24" %}
+                <input placeholder="Sizə maraqlı olanı axtarın" class="w-[204px] border-none focus:ring-0 p-0" type="text">
+            </div>
+            <div class="bg-secondary rounded-[48px] border border-borderDefault h-[48px] w-[110px] flex items-center justify-center gap-[8px]">
+                <span class="text-[18px] leading-[24px] text-text-black">Tarix</span>
+                {% include "components/ui/icons/AxesBottom.html" with width="20" height="20" %}
+            </div>
+            <div class="bg-secondary rounded-[48px] border border-borderDefault h-[48px] w-[160px] flex items-center justify-center gap-[8px]">
+                <span class="text-[18px] leading-[24px] text-text-black">Kateqoriya</span>
+                {% include "components/ui/icons/AxesBottom.html" with width="20" height="20" %}
+            </div>
+        </div>
+        <button data-modal-id="workspace-create" class="open-modal bg-primary hover:bg-primary-hover text-text-white h-[44px] flex items-center px-[16px] rounded-[48px] gap-[8px]">
+            <span class="text-[22px]">+</span>
+            <span>Virtual ofis yarat</span>
+        </button>
 
-        {% include "pages/dashboard/components/VirtualOffice.html" %}
-        {% include "pages/dashboard/components/VirtualOffice.html" %}
-        {% include "pages/dashboard/components/VirtualOffice.html" %}
-        {% include "pages/dashboard/components/VirtualOffice.html" %}
-        {% include "pages/dashboard/components/VirtualOffice.html" %}
-        {% include "pages/dashboard/components/VirtualOffice.html" %}
-
-    </section>
+    </div>
+    <div class="mt-[72px]">
+        <div class="gap-x-[23.5px] gap-y-[20px] grid grid-cols-3">
+            {% include "pages/dashboard/components/common/VirtualOffice.html" %}
+            {% include "pages/dashboard/components/common/VirtualOffice.html" %}
+            {% include "pages/dashboard/components/common/VirtualOffice.html" %}
+            {% include "pages/dashboard/components/common/VirtualOffice.html" %}
+            {% include "pages/dashboard/components/common/VirtualOffice.html" %}
+            {% include "pages/dashboard/components/common/VirtualOffice.html" %}
+            {% include "pages/dashboard/components/common/VirtualOffice.html" %}
+            {% include "pages/dashboard/components/common/VirtualOffice.html" %}
+            {% include "pages/dashboard/components/common/VirtualOffice.html" %}
+        </div>
+        <div class="mt-[40px] flex justify-end">
+            <button class="text-text-black leading-[24px] font-[500]">Daha çox</button>
+        </div>
+    </div>
+   
+    {% include "pages/dashboard/components/modals/WorkspaceCreate.html" %}
+      
 {% endblock main %}
