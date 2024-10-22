@@ -1,0 +1,134 @@
+{% extends "layouts/default/index.html" %}
+{% load static %}
+
+{% block main %}
+    
+    <section class="mt-[59px] custom-container rounded-[20px] overflow-hidden bg-secondary">
+        <img class="w-full h-[244px] object-cover" src="{% static "images/grid.png" %}" alt="">
+        <div class="pt-[56px] pb-[64px] px-[32px]">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-[32px]">
+                    <h2 class="text-[40px] font-[600] text-text-black leading-[48px]">Vebsayt Hazırlanması</h2>
+                    <div class="text-primary text-[20px] font-[500] leading-[28px] bg-[#FFF9EF] py-[10px] px-[16px] rounded-[48px]">Nəticə əsaslı</div>
+                </div>  
+                <div class="flex items-center gap-[16px]">
+                    {% include "components/ui/buttons/ApplyBtn.html" %}
+                    {% include "components/ui/buttons/ShareBtn.html" %}
+                </div>
+            </div>
+            <p class="mt-[28px] text-text-gray text-[24px] leading-[32px]">Lorem ipsum dolor sit amet consectetur. Turpis donec magna facilisis mi. Et pretium felis eget amet amet non. Volutpat lectus molestie volutpat aliquet nunc risus euismod. Urna porttitor consectetur diam ipsum</p>
+            <div class="mt-[32px] flex flex-wrap gap-[20px]">
+                <div class="rounded-[48px] py-[12px] px-[16px] flex items-center bg-[#D7D9DD40]/25">
+                    UX/Uİ Dizayner
+                </div> 
+                <div class="rounded-[48px] py-[12px] px-[16px] flex items-center bg-[#D7D9DD40]/25">
+                    UX/Uİ Dizayner
+                </div>   
+                <div class="rounded-[48px] py-[12px] px-[16px] flex items-center bg-[#D7D9DD40]/25">
+                    UX/Uİ Dizayner
+                </div> 
+                <div class="rounded-[48px] py-[12px] px-[16px] flex items-center bg-[#D7D9DD40]/25">
+                    UX/Uİ Dizayner
+                </div> 
+                <div class="rounded-[48px] py-[12px] px-[16px] flex items-center bg-[#D7D9DD40]/25">
+                    UX/Uİ Dizayner
+                </div> 
+            </div>
+            <div class="mt-[40px] flex gap-[40px]">
+                <div class="flex gap-[8px]">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.0177 4.09313L18.0711 8.19979C18.3511 8.77146 19.0977 9.31979 19.7277 9.42479L23.4494 10.0431C25.8294 10.4398 26.3894 12.1665 24.6744 13.8698L21.7811 16.7631C21.2911 17.2531 21.0227 18.1981 21.1744 18.8748L22.0027 22.4565C22.6561 25.2915 21.1511 26.3881 18.6427 24.9065L15.1544 22.8415C14.5244 22.4681 13.4861 22.4681 12.8444 22.8415L9.35607 24.9065C6.85941 26.3881 5.34274 25.2798 5.99607 22.4565L6.82441 18.8748C6.97607 18.1981 6.70774 17.2531 6.21774 16.7631L3.32441 13.8698C1.62107 12.1665 2.16941 10.4398 4.54941 10.0431L8.27107 9.42479C8.88941 9.31979 9.63607 8.77146 9.91607 8.19979L11.9694 4.09313C13.0894 1.86479 14.9094 1.86479 16.0177 4.09313Z" stroke="#F5AB20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div>
+                        <h3 class="text-text-black text-[20px]">5 ulduz</h3>
+                        <p class="text-text-gray">Reytinq</p>
+                    </div>
+                </div>
+                <div class="flex gap-[8px]">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1913 16.2819C14.9935 16.2819 20.0487 16.71 20.0487 20.4142C20.0487 24.3161 14.1583 24.5503 11.6316 24.5643L10.7143 24.5643C8.02024 24.5503 2.33398 24.3175 2.33398 20.4375C2.33398 16.5312 8.22436 16.2968 10.751 16.2828L11.0546 16.2819C11.1019 16.2819 11.1475 16.2819 11.1913 16.2819ZM11.1913 18.0319C7.94915 18.0319 4.08398 18.4484 4.08398 20.4375C4.08398 22.0149 6.47565 22.8152 11.1913 22.8152C15.907 22.8152 18.2987 22.0067 18.2987 20.4142C18.2987 18.8334 15.907 18.0319 11.1913 18.0319ZM21.8251 15.7369C24.9821 16.2094 25.6436 17.6712 25.6436 18.8134C25.6436 19.6639 25.2761 20.8154 23.5226 21.4792C23.4211 21.5177 23.3161 21.5364 23.2123 21.5364C22.8588 21.5364 22.5263 21.3206 22.3945 20.9717C22.223 20.5202 22.4505 20.0139 22.902 19.8436C23.8936 19.4679 23.8936 19.0094 23.8936 18.8134C23.8936 18.1519 23.1108 17.6992 21.5673 17.4694C21.089 17.3971 20.7588 16.9514 20.83 16.4742C20.9023 15.9959 21.3561 15.6751 21.8251 15.7369ZM11.1913 2.33203C14.4942 2.33203 17.1822 5.02003 17.1822 8.32287C17.1892 9.9142 16.572 11.4169 15.4473 12.5485C14.325 13.6814 12.8258 14.3079 11.231 14.3137H11.1913C7.88732 14.3137 5.19932 11.6257 5.19932 8.32287C5.19932 5.02003 7.88732 2.33203 11.1913 2.33203ZM19.4602 3.64313C21.7527 4.0188 23.4164 5.97996 23.4164 8.30513C23.4117 10.6443 21.6652 12.6533 19.3529 12.9776C19.312 12.9835 19.2712 12.9858 19.2304 12.9858C18.801 12.9858 18.4265 12.6696 18.3647 12.2321C18.2982 11.7538 18.6307 11.3105 19.109 11.244C20.565 11.0398 21.664 9.7763 21.6664 8.30397C21.6664 6.84097 20.6187 5.60663 19.1779 5.37096C18.7007 5.29163 18.3775 4.84246 18.4557 4.3653C18.5339 3.88813 18.9854 3.5673 19.4602 3.64313ZM11.1913 4.08203C8.85215 4.08203 6.94932 5.98487 6.94932 8.32287C6.94932 10.6609 8.85215 12.5637 11.1913 12.5637H11.2275C12.3521 12.559 13.4115 12.1169 14.206 11.3154C15.0017 10.5162 15.4368 9.45337 15.4322 8.32636C15.4322 5.98486 13.5293 4.08203 11.1913 4.08203Z" fill="#F5AB20"/>
+                    </svg>
+                    <div>
+                        <h3 class="text-text-black text-[20px]">4 nəfər</h3>
+                        <p class="text-text-gray">Əməkdaş sayı</p>
+                    </div>
+                </div>
+                <div class="flex gap-[8px]">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.60742 10.9727H24.402" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.1816 15.5273H19.1908" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.0059 15.5273H14.0151" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.81641 15.5273H8.82567" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.1816 20.0625H19.1908" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.0059 20.0625H14.0151" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.81641 20.0625H8.82567" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.7168 2.33203V6.17128" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.29297 2.33203V6.17128" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.41667 4.65625C4.57332 5.42645 3.5 7.10869 3.5 9.59327V20.1512C3.5 23.7146 5.63998 25.6674 9.06612 25.6674H14" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.9453 4.17578C22.3822 4.17578 24.5114 6.08438 24.5007 9.59265V20.2388C24.5007 23.7471 22.3715 25.6667 18.9345 25.6667H18.084" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.33398 4.17578H14.006H15.7507" stroke="#F5AB20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                            
+                    <div>
+                        <h3 class="text-text-black text-[20px]">30 gün</h3>
+                        <p class="text-text-gray">Müddət</p>
+                    </div>
+                </div>
+                <div class="flex gap-[8px]">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.696 26.543H7.30268C4.39768 26.543 2.04102 24.1863 2.04102 21.2813V13.4296C2.04102 10.5246 4.39768 8.16797 7.30268 8.16797H20.696C23.601 8.16797 25.9577 10.5246 25.9577 13.4296V15.1096C25.9577 15.588 25.561 15.9846 25.0827 15.9846H22.726C22.3177 15.9846 21.9443 16.1363 21.676 16.4163L21.6644 16.428C21.3377 16.743 21.186 17.1746 21.221 17.6179C21.291 18.3879 22.026 19.0063 22.866 19.0063H25.0827C25.561 19.0063 25.9577 19.4029 25.9577 19.8813V21.2696C25.9577 24.1863 23.601 26.543 20.696 26.543ZM7.30268 9.91797C5.36602 9.91797 3.79102 11.493 3.79102 13.4296V21.2813C3.79102 23.218 5.36602 24.793 7.30268 24.793H20.696C22.6327 24.793 24.2077 23.218 24.2077 21.2813V20.768H22.866C21.1044 20.768 19.611 19.4613 19.471 17.7813C19.3777 16.8246 19.7277 15.8797 20.4277 15.1913C21.0344 14.573 21.851 14.2346 22.726 14.2346H24.2077V13.4296C24.2077 11.493 22.6327 9.91797 20.696 9.91797H7.30268Z" fill="#F5AB20"/>
+                        <path d="M2.91602 15.352C2.43768 15.352 2.04102 14.9554 2.04102 14.477V9.14544C2.04102 7.4071 3.13768 5.83204 4.75935 5.2137L14.0227 1.7137C14.9794 1.35204 16.041 1.48043 16.8694 2.06376C17.7093 2.64709 18.1994 3.59209 18.1994 4.60709V9.04041C18.1994 9.51874 17.8027 9.91541 17.3244 9.91541C16.846 9.91541 16.4494 9.51874 16.4494 9.04041V4.60709C16.4494 4.16375 16.2394 3.7554 15.866 3.49874C15.4927 3.24207 15.0493 3.18373 14.6293 3.34707L5.36602 6.84707C4.42102 7.20873 3.77935 8.13044 3.77935 9.14544V14.477C3.79102 14.967 3.39435 15.352 2.91602 15.352Z" fill="#F5AB20"/>
+                        <path d="M22.8669 20.7677C21.1052 20.7677 19.6119 19.461 19.4719 17.781C19.3785 16.8127 19.7285 15.8677 20.4285 15.1794C21.0235 14.5727 21.8402 14.2344 22.7152 14.2344H25.1419C26.2969 14.2694 27.1835 15.1793 27.1835 16.2993V18.7027C27.1835 19.8227 26.2969 20.7327 25.1769 20.7677H22.8669ZM25.1185 15.9844H22.7269C22.3185 15.9844 21.9452 16.136 21.6769 16.416C21.3385 16.7427 21.1752 17.186 21.2219 17.6293C21.2919 18.3993 22.0269 19.0177 22.8669 19.0177H25.1535C25.3052 19.0177 25.4452 18.8777 25.4452 18.7027V16.2993C25.4452 16.1243 25.3052 15.996 25.1185 15.9844Z" fill="#F5AB20"/>
+                        <path d="M16.3327 14.875H8.16602C7.68768 14.875 7.29102 14.4783 7.29102 14C7.29102 13.5217 7.68768 13.125 8.16602 13.125H16.3327C16.811 13.125 17.2077 13.5217 17.2077 14C17.2077 14.4783 16.811 14.875 16.3327 14.875Z" fill="#F5AB20"/>
+                    </svg>
+                    <div>
+                        <h3 class="text-text-black text-[20px]">200 azn</h3>
+                        <p class="text-text-gray">Əmək haqqı</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="mt-[64px] space-y-[12px]">
+                <li class="flex items-center gap-[12px]">
+                    {% include "components/ui/sections/CheckMark.html" %}
+                    <span class="text-[20px] leading-[28px] text-text-black">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet dolor sit</span>
+                </li>
+                <li class="flex items-center gap-[12px]">
+                    {% include "components/ui/sections/CheckMark.html" %}
+                    <span class="text-[20px] leading-[28px] text-text-black">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet dolor sit</span>
+                </li>
+                <li class="flex items-center gap-[12px]">
+                    {% include "components/ui/sections/CheckMark.html" %}
+                    <span class="text-[20px] leading-[28px] text-text-black">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet dolor sit</span>
+                </li>
+                <li class="flex items-center gap-[12px]">
+                    {% include "components/ui/sections/CheckMark.html" %}
+                    <span class="text-[20px] leading-[28px] text-text-black">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet dolor sit</span>
+                </li>
+            </ul>
+            <h3 class="mt-[72px] text-[32px] text-text-black font-[500] leading-[40px]">Portfel</h3>
+            <div class="mt-[32px]">
+                <div class="grid grid-cols-3 gap-[37.5px]">
+                    <div class="rounded-[12px] overflow-hidden">
+                        <img class="w-full h-[280px] object-cover" src="{% static "images/grid.png" %}" alt="">
+                        <h4 class="mt-[20px] text-primary px-[8x]">Lorem ipsum dolor sit lare pls fa </h4>
+                    </div>
+                    <div class="rounded-[12px] overflow-hidden">
+                        <img class="w-full h-[280px] object-cover" src="{% static "images/grid.png" %}" alt="">
+                        <h4 class="mt-[20px] text-primary px-[8x]">Lorem ipsum dolor sit lare pls fa </h4>
+                    </div>
+                    <div class="rounded-[12px] overflow-hidden">
+                        <img class="w-full h-[280px] object-cover" src="{% static "images/grid.png" %}" alt="">
+                        <h4 class="mt-[20px] text-primary px-[8x]">Lorem ipsum dolor sit lare pls fa </h4>
+                    </div>
+                </div>
+                <div class="mt-[56px] flex justify-end">
+                    {% include "components/ui/pagination/Pagination.html" %}
+                </div>
+                <div class="mt-[64px] flex justify-end gap-[24px]">
+                    {% include "components/ui/buttons/DefaultBtn.html" with text="Mesaj yaz" %}
+                    {% include "components/ui/buttons/DefaultBtn.html" with text="Paketə qoşul" %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock main %}

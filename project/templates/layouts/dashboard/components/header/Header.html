@@ -1,24 +1,19 @@
 {% load star_rating %}
-
-<header class="flex justify-end items-center gap-[44px] mb-6">
-    <div class="flex space-x-[16px]">
-        <button class="bg-[#BFFFE5] text-black flex gap-[8px] items-center px-[16px] py-[10px] font-[500] rounded-full">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 6.75H6.75V12H5.25V6.75H0V5.25H5.25V0H6.75V5.25H12V6.75Z" fill="#252831"/>
-            </svg>
-            <span>Virtual ofis yarat</span>
-        </button>
-      <button class="bg-primary text-black px-[16px] py-[10px] font-[500] rounded-full">Üzv olduğum virtual ofislar</button>
-      <button class="bg-[#BFFFE5] text-black px-[16px] py-[10px] font-[500] rounded-full">Mənim virtual ofislarim</button>
-    </div>
-    <div class="flex items-center gap-[12px]">
-      <img class="h-[64px] w-[64px] rounded-full" src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1727049600&semt=ais_hybrid" alt="Profile">
-      <div>
-        <p class="font-[500] text-[20px] text-[#252831]">Ayaz Samadov</p>
-        <p class="font-[500] text-[14px] text-[#7E7E7E]">Product Designer</p>
-        <div class="flex gap-[2px]">
-            {% rating rating=4 total=5 %}
+{% load static %}
+ 
+<header class="h-[54px] flex justify-end items-center gap-[20px]">
+    {% include "components/ui/icons/Notification.html" with notification="True" %}
+    <div class="flex gap-[12px]">
+        <img class="w-[48px] h-[48px] object-cover rounded-full" src="{% static "images/grid.png" %}" alt="">
+        <div class="space-y-[2px]">
+            <h2 class="text-text-black leading-[20px] font-[500]">Ayaz Samadov</h2>
+            <p class="text-text-gray leading-[14px] text-[10px] font-[500]">Product Designer</p>
+            <div class="flex items-center gap-[6px]">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.12114 3.66996L0.931139 4.13246L0.874639 4.14396C0.789108 4.16667 0.711136 4.21167 0.648685 4.27436C0.586234 4.33706 0.541541 4.41521 0.51917 4.50082C0.496799 4.58644 0.497552 4.67647 0.521353 4.7617C0.545153 4.84693 0.591147 4.92432 0.654639 4.98596L2.96564 7.23546L2.42064 10.413L2.41414 10.468C2.4089 10.5564 2.42727 10.6447 2.46736 10.7237C2.50746 10.8027 2.56783 10.8697 2.64231 10.9177C2.71678 10.9657 2.80268 10.9931 2.89121 10.997C2.97974 11.0009 3.06772 10.9812 3.14614 10.94L5.99914 9.43996L8.84564 10.94L8.89564 10.963C8.97817 10.9955 9.06786 11.0054 9.15552 10.9918C9.24317 10.9782 9.32563 10.9416 9.39443 10.8856C9.46324 10.8296 9.51592 10.7563 9.54706 10.6733C9.5782 10.5902 9.58668 10.5004 9.57164 10.413L9.02614 7.23546L11.3381 4.98546L11.3771 4.94296C11.4328 4.87435 11.4694 4.79219 11.483 4.70486C11.4966 4.61753 11.4869 4.52815 11.4547 4.44583C11.4225 4.3635 11.3691 4.29118 11.2999 4.23622C11.2307 4.18126 11.1481 4.14563 11.0606 4.13296L7.87064 3.66996L6.44464 0.779961C6.40338 0.696229 6.3395 0.625719 6.26023 0.576414C6.18097 0.527108 6.08949 0.500977 5.99614 0.500977C5.90279 0.500977 5.81131 0.527108 5.73204 0.576414C5.65278 0.625719 5.5889 0.696229 5.54764 0.779961L4.12114 3.66996Z" fill="#F5AB20"/>
+                </svg>
+                <span class="text-[12px] font-[500] text-primary">4.5</span>    
+            </div>
         </div>
-    </div>
     </div>
 </header>

@@ -1,0 +1,102 @@
+{% extends "layouts/default/index.html" %}
+
+{% block main %}
+    
+<section class="mt-[94px] bg-secondary custom-container rounded-[20px]">
+    <div class="p-[45px] pt-[74px]">
+        <h2 class="text-primary text-[40px] font-[600] leading-[48px]">Öz Paketini Yarat!</h2>
+        <p class="mt-[16px] text-text-gray text-[24px] leading-[32px]">Öz paketinizi yaradaraq, daha çox kütləyə çatın.</p>
+        
+        <div class="mt-[72px] grid grid-cols-2 gap-[78px]">
+            <div>
+                <div>
+                    <label class="block text-[20px] leading-[28px] font-[500] text-text-black" for="name">Paketin adı</label>
+                    <input id="name" class="mt-[12px] w-full py-[18px] px-[16px] border-borderDefault rounded-[12px] placeholder:text-text-gray focus:ring-primary focus:border-primary" type="text" placeholder="Paket adı daxil edin">
+                </div>
+                <div class="mt-[86px]">
+                    <div class="flex justify-between items-center">
+                        <p class="block text-[20px] leading-[28px] font-[500] text-text-black">Fayl</p>
+                        <button class="w-[28px] h-[28px] rounded-full text-white bg-primary flex items-center justify-center text-[22px]">+</button>
+                    </div>
+                    <p class="mt-[12px] text-text-gray ">JPG, PNG və ya SVG faylını seçərək ağ lövhənizə əlavə edin.</p>
+                    
+                    <div class="file-upload-component" data-modal-id="imageModal1">
+                        <label for="file-upload-1" class="mt-[20px] border border-borderDefault rounded-[8px] py-[25px] flex justify-center items-center cursor-pointer">
+                            <span class="text-text-black">Faylı bura buraxın</span> 
+                            <span class="ml-1 or-text hidden">və ya</span>
+                            <button class="text-primary ml-1 font-[500] underline view-image-button hidden">Nəzərdən keçirin</button>
+                            <input id="file-upload-1" type="file" class="hidden file-upload">
+                        </label>
+                    </div>
+                    
+                    <!-- Modal -->
+                    <div id="imageModal1" class="hidden z-[500] fixed inset-0 bg-gray-800 bg-opacity-50 items-center justify-center">
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <div class="flex justify-end">
+                                <button class="close-modal mt-2  text-white p-2 rounded">
+                                    {% include "components/ui/icons/Close.html" %}
+                                </button>
+                            </div>
+                            <img class="mt-[30px] max-h-[600px] modal-image w-auto" src="" alt="Uploaded Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-[41px]">
+                    <div class="flex justify-between items-center">
+                        <label for="link" class="block text-[20px] leading-[28px] font-[500] text-text-black">Linklər</label>
+                        <button class="w-[28px] h-[28px] rounded-full text-white bg-primary flex items-center justify-center text-[22px]">+</button>
+                    </div>
+                    <input id="link" class="mt-[12px] w-full py-[18px] px-[16px] border-borderDefault rounded-[12px] placeholder:text-text-gray focus:ring-primary focus:border-primary" type="text" placeholder="Linki daxil edin">
+                </div>
+            </div>
+
+
+            <div class="flex flex-col">
+                <div>
+                    <label class="block text-[20px] leading-[28px] font-[500] text-text-black" for="description">Paketin təsviri</label>
+                    <textarea name="" id="description" rows="3" placeholder="Mesajınızı daxil edin" class="mt-[12px] w-full py-[18px] px-[16px] border-borderDefault rounded-[12px] placeholder:text-text-gray focus:ring-primary focus:border-primary">
+                    </textarea>
+                </div>
+                <div class="mt-[28px]">
+                    <p class="block text-[20px] leading-[28px] font-[500] text-text-black">Şərtlər</p>
+                    <ul class="mt-[20px] space-y-[8px]">
+                        <li class="flex items-center gap-[8px]">
+                            {% include "components/ui/sections/CheckMark.html" %}
+                            <span>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet dolor sit</span>
+                        </li>
+                        <li class="flex items-center gap-[8px]">
+                            {% include "components/ui/sections/CheckMark.html" %}
+                            <span>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet dolor sit</span>
+                        </li>
+                        <li class="flex items-center gap-[8px]">
+                            {% include "components/ui/sections/CheckMark.html" %}
+                            <span>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet dolor sit</span>
+                        </li>
+                        <li class="flex items-center gap-[8px]">
+                            {% include "components/ui/sections/CheckMark.html" %}
+                            <span>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet dolor sit</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-grow flex items-end">
+                    <div class="w-full grid grid-cols-2 gap-[28px]">
+                        <div class="border border-borderDefault rounded-[8px] flex justify-between items-center p-[14px]">
+                            <span class="text-[20px] leading-[28px]">Qiymət aralığı</span>
+                            {% include "components/ui/icons/AxesBottom.html" with width="24" height="24" %}
+                        </div>
+                        <div class="border border-borderDefault rounded-[8px] flex justify-between items-center p-[14px]">
+                            <span class="text-[20px] leading-[28px]">Qiymət aralığı</span>
+                            {% include "components/ui/icons/AxesBottom.html" with width="24" height="24" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-end mt-[48px]">
+            {% include "components/ui/buttons/MessageSendBtn.html" %}
+        </div>
+    </div>
+</section>
+
+{% endblock main %}

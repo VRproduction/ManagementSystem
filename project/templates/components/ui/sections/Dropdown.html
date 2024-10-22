@@ -1,0 +1,15 @@
+<div class="dropdown relative  text-left w-full">
+    <div>
+      <button type="button" class="dropdown-button flex items-center justify-between w-full rounded-md border border-gray-300 shadow-sm px-4 h-[53px] bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 ">
+        <span>{{title}}</span>
+        {% include "components/ui/icons/AxesBottom.html" with width="24" height="24" %}
+      </button>
+    </div>
+    <div class="dropdown-menu hidden origin-top-right absolute z-[50] left-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+      <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="dropdownButton">
+        {% for option in options %}
+        <button type="button" class="dropdown-item w-full block px-4 py-2 text-sm text-start text-gray-700 hover:bg-gray-100 hover:text-gray-900" data-value="{{option.title}}">{{option.title}}</button>
+        {% endfor %}
+      </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div id="workspace-create" class="modal hidden fixed inset-0 bg-gray-600 bg-opacity-50 justify-center items-center z-50">
+    <div class="bg-white rounded-[30px] w-[638px]  py-[40px] px-[32px] ">
+        <div class="flex justify-between items-center">
+            <h2 class="text-[24px] font-[500] leading-[32px]">Virtual ofis yarat</h2>
+            <button class="close-modal text-gray-500 hover:text-gray-700">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.83105 5.83203L22.1633 22.1643" stroke="#5A5C62" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5.82988 22.1643L22.1621 5.83203" stroke="#5A5C62" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <form class="mt-[56px]">
+            <div>
+                <label for="name" class="block font-[500] leading-[25px] text-text-black">Virtual ofisin adı</label>
+                <input placeholder="Virtual ofisin adını daxil edin" id="name" type="text" class="mt-[8px] w-full p-[16px] border border-borderDefault rounded-md focus:border-primary focus:ring-primary" placeholder="Virtual ofisin adını daxil edin">
+            </div>
+          
+            <div class="mt-[24px]">
+                <label class="block font-[500] leading-[25px] text-text-black">Kateqoriya</label>
+
+                <div class="mt-[8px]">
+                    {% include 'components/ui/sections/Dropdown.html' with title="Seç" options=categories %}
+                </div>
+            </div>
+            
+            <div class="mt-[24px]">
+                <label class="block font-[500] leading-[25px] text-text-black">Status</label>
+
+                <div class="mt-[8px]">
+                    {% include "components/ui/sections/Dropdown.html" with title="Seç" options=statuses %}
+                </div>
+            </div>
+
+            <div class="mt-[24px]">
+                <label class="block font-[500] leading-[25px] text-text-black">Qısa təsvir (məcburi deyil)</label>
+                <textarea rows="3" placeholder="Virtual ofisi qısa təsvir edin" class="mt-[8px] resize-none  w-full p-[16px] border border-borderDefault rounded-md focus:border-primary focus:ring-primary"></textarea>
+
+            </div>
+
+            <div class="mt-[56px] grid grid-cols-2 gap-[13px]">
+                <button type="button" class="close-modal bg-close hover:bg-close-hover focus:bg-close-focus rounded-[48px] text-[20px] h-[60px] text-text-black font-[500]">
+                    Ləğv et
+                </button>
+                <button class="bg-primary hover:bg-primary-hover focus:bg-primary-focus rounded-[48px] text-[20px] h-[60px] text-text-white font-[500]">
+                    Virtual ofis yarat
+                </button>
+            </div>
+            
+        </form>
+    </div>
+</div>

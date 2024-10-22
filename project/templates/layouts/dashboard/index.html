@@ -25,24 +25,22 @@
 
 </head>
 
-<body class="bg-[#FAFCFE]">
+<body class="bg-[#F4F6FA]">
+    {% include "components/ui/loading/Loading.html" %}
 
-    <div class="custom-container flex">
-        <!-- Sidebar -->
+    <div>
         {% include "layouts/dashboard/components/sidebar/Sidebar.html" %}
-      
-        <!-- Main Content -->
-        <div class="ml-[380px] flex-1 flex flex-col pt-[41px] p-[27px]">
-          <!-- Top Header -->
-        {% include "layouts/dashboard/components/header/Header.html" %}
 
-        {% block main %}
-        {% endblock main %}
+        <div class="relative ml-[272px] pl-[32px] pt-[32px] pr-[108px] pb-[64px]">
+            {% include "layouts/dashboard/components/header/Header.html" %}
 
-        </div> 
-      </div>
-      
-    {% include "layouts/dashboard/components/footer/Footer.html" %}
+            <div class="mt-[24px]">
+                {% block main %}{% endblock main %}
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="{% static 'dist/default.bundle.js' %}"></script>
 
 </body>
 
